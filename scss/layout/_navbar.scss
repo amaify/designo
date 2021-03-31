@@ -28,6 +28,21 @@
                 color: $black;
                 text-transform: uppercase;
                 font-weight: 300;
+
+                &::after {
+                    content: '';
+                    width: 0;
+                    height: 1px;
+                    background: $black;
+                    display: block;
+                    transition: all 0.3s;
+                }
+
+                &:hover {
+                    &::after {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
