@@ -1,0 +1,175 @@
+.web-hero {
+    background: $peach;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 0;
+    margin-bottom: 12rem;
+    color: $white;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+
+    &__heading {
+        text-transform: capitalize;
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        text-align: center;
+
+        & span {
+            display: block;
+        }
+    }
+
+    &::after {
+        content: url("../../assets/web-design/desktop/bg-pattern-intro-web.svg");
+        position: absolute;
+        top: -60%;
+        left: 33.5%;
+    }
+}
+
+.web-designs {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-evenly;
+    margin-bottom: 15rem;
+
+    &__content {
+        width: 32%;
+        margin-bottom: 2rem;
+        margin-left: 1.5rem;
+
+
+        &--image {
+            margin: 0;
+
+            & img {
+                width: 100%;
+                object-fit: cover;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                display: block;
+            }
+        }
+
+        &--text {
+            background: $lighter-peach;
+            text-align: center;
+            padding: 2rem 10rem;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            transition: all 0.3s;
+
+            &-heading {
+                color: $peach;
+                text-transform: uppercase;
+                font-size: 2rem;
+                letter-spacing: 5px;
+                font-weight: 300;
+                transition: all 0.3s;
+            }
+
+            &-text {
+                color: $dark-grey;
+                font-size: 1.2rem;
+                transition: all 0.3s;
+            }
+
+            &:hover {
+                background: $peach;
+                cursor: pointer;
+            }
+
+            &:hover &-heading, &:hover &-text {
+                color: $white;
+            }
+        }
+    }
+}
+
+.design-links {
+    display: flex;
+    position: relative;
+    margin-bottom: 35rem;
+    // padding-bottom: 15rem;
+
+    &__content {
+        width: 49%;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: auto;
+        }
+
+        & img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        @include overlay;
+
+        // &:hover {
+        //     @include hoverOverlay;
+        // }
+
+        &--text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 100%;
+
+            &-heading {
+                color: $white;
+                width: 100%;
+                text-transform: uppercase;
+                font-size: 3.5rem;
+                font-weight: 300;
+                letter-spacing: 4px;
+                text-align: center;
+            }
+
+            &-link {
+                text-decoration: none;
+                color: $white;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                width: 100%;
+
+                & img {
+                    width: 2%;
+                    height: 10%;
+                    transition: all  0.3s;
+                    align-self: center;
+                }
+
+                & p {
+                    margin-right: 3rem;
+                }
+
+                &:hover {
+                    & img {
+                        transform: translateX(100%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sub-design {
+    bottom: -21.5%;
+}

@@ -330,21 +330,11 @@
         }
 
         &::after {
-            content: url("../../assets/shared/desktop/bg-pattern-three-circles.svg");
+            content: url("../../assets/web-design/desktop/bg-pattern-intro-web.svg");
             position: absolute;
-            right: 0;
-            top: 0;
-            z-index: 0;
-            // transform: rotate(90deg);
-        }
-
-        &::before {
-            content: url("../../assets/shared/desktop/bg-pattern-two-circles.svg");
-            position: absolute;
-            right: 45%;
-            bottom: -45%;
-            z-index: 0;
-            // transform: rotate(90deg);
+            top: -60%;
+            left: 33.5%;
+            transform: rotate(180deg);
         }
     }
 }
