@@ -1,0 +1,277 @@
+.about {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15rem;
+
+    &-intro {
+
+        &__left {
+            background: $peach;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+            width: 65%;
+            color: $white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 0 0 10rem;
+        }
+
+        &__right {
+            width: 35%;
+
+            & img {
+                width: 100%;
+                object-fit: cover;
+                display: block;
+                border-top-right-radius: 12px;
+                border-bottom-right-radius: 12px;
+            }
+        }
+
+        &__heading {
+            font-size: 5rem;
+            text-transform: capitalize;
+            margin-bottom: 2rem;
+        }
+
+        &__text {
+            font-size: 1.5rem;
+            width: 52%;
+            line-height: 2.5rem;
+        }
+    }
+
+    &::after {
+        content: url("../../assets/about/desktop/bg-pattern-hero-about-desktop.svg");
+        position: absolute;
+        top: -37%;
+        left: 16.5%;
+    }
+
+    &-sub {
+        bottom: -18% !important;
+    }
+}
+
+.world {
+    display: flex;
+    margin-bottom: 15rem;
+
+    &-content {
+
+        &__left {
+            width: 30%;
+            position: relative;
+            z-index: 1;
+        }
+
+        &__right {
+            background: $lighter-peach;
+            width: 70%;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+            position: relative;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 15rem;
+
+            &::after {
+                content: url("../../assets/shared/desktop/bg-pattern-two-circles.svg");
+                position: absolute;
+                top: 45.5%;
+                left: -10%;
+                z-index: 0;
+            }
+        }
+
+        & img {
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+
+        &__content {
+            width: 60%;
+        }
+
+        &__heading {
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: $peach;
+            margin-bottom: 3rem;
+        }
+
+        &__text {
+            color: $dark-grey;
+            font-size: 1.7rem;
+            font-weight: 300;
+
+            & span {
+                display: block;
+
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.countries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15rem;
+    position: relative;
+    z-index: 1;
+
+    &-content {
+        width: 32%;
+        text-align: center;
+        position: relative;
+
+       &__image {
+            width: 40%;
+            margin: 0 auto 3rem auto;
+
+            & img {
+                width: 100%;
+            }
+       }
+
+       &__heading {
+           font-size: 2.5rem;
+           text-transform: uppercase;
+           color: $dark-grey;
+           font-weight: 300;
+           margin-bottom: 3.5rem;
+           letter-spacing: 0.6rem;
+       }
+
+       &__link {
+           text-decoration: none;
+           background: $peach;
+           padding: 1.2rem 1.4rem;
+           color: $white;
+           border-radius: 4px;
+           font-size: 1.5rem;
+           font-weight: 300;
+           transition: all 0.3s;
+           text-transform: uppercase;
+
+           &:hover {
+               background: $light-peach;
+           }
+       }
+
+       &__left::after {
+            content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+            position: absolute;
+            top: -8%;
+            left: 24%;
+            transform: rotate(90deg);
+       }
+
+       &__center::after {
+            content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+            position: absolute;
+            top: -8%;
+            left: 28%;
+       }
+
+       &__right::after {
+            content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+            position: absolute;
+            top: -8%;
+            left: 28%;
+            transform: rotate(-90deg);
+       }
+    }
+
+    &::after {
+        content: url("../../assets/shared/desktop/bg-pattern-leaf.svg");
+        position: absolute;
+        top: 57%;
+        left: 57%;
+        z-index: -1;
+    }
+}
+
+.deal {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 35rem;
+
+    &-content {
+        
+
+        &__left {
+            width: 70%;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+            background: $lighter-peach;
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 15rem;
+
+            &::after {
+                content: url("../../assets/shared/desktop/bg-pattern-two-circles.svg");
+                position: absolute;
+                bottom: 0;
+                left: 1%;
+                z-index: 0;
+            }
+        }
+
+        &__right {
+            width: 30%;
+
+            & img {
+                width: 100%;
+                display: block;
+                object-fit: cover;
+
+                border-top-right-radius: 12px;
+                border-bottom-right-radius: 12px;
+            }
+        }
+
+        &__texts {
+            // padding: 0 10rem;
+            width: 60%;
+
+            &--heading {
+                font-size: 4rem;
+                color: $peach;
+                margin-bottom: 3rem;
+                font-weight: 400;
+            }
+
+            &--text {   
+                font-size: 1.7rem;
+                color: $dark-grey;
+                font-weight: 300;
+
+                & span {
+                    display: block;
+
+                    &:not(:last-child) {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

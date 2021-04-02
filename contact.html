@@ -9,40 +9,155 @@
   <title>Frontend Mentor | Designo Agency Website Challenge</title>
 </head>
 <body>
-  Our Company
-  Locations
-  Contact
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-logo">
+        <a href="/">
+          <img src="./assets/shared/desktop/logo-dark.png" alt="LOGO" class="nav-logo__image">
+        </a>
+      </div>
+      <ul class="nav-link">
+        <li class="nav-link__item">
+          <a href="./about.html">Our Company</a>
+        </li>
+        <li class="nav-link__item">
+          <a href="./locations.html">Locations</a>
+        </li>
+        <li class="nav-link__item">
+          <a href="./contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-  Contact us
-  Ready to take it to the next level? Let’s talk about your project or idea and find out how 
-  we can help your business grow. If you are looking for unique digital experiences that’s 
-  relatable to your users, drop us a line.
+  <section class="main-container contact-container">
+    <article class="contact">
+      <div class="contact-intro contact-intro__left">
+        <h2 class="contact-intro__heading">Contact us</h2>
+        <p class="contact-intro__text">
+          Ready to take it to the next level? Let’s talk about your project or idea and find 
+          out how we can help your business grow. If you are looking for unique digital 
+          experiences that’s relatable to your users, drop us a line.
+        </p>
+      </div>
+      <div class="contact-intro contact-intro__right">
+        <form action="" class="contact-form">
+          <div class="contact-form__group">
+            <input type="text" autocomplete="name" placeholder="Name" name="name" class="text-input">
+            <p class="contact-form__group--error">
+              <span class="contact-form__group--error-text">Can't be empty</span>
+              <span  class="contact-form__group--error-icon">
+                <img src="./assets/contact/desktop/icon-error.svg" alt="Error Sign">
+              </span>
+            </p>
+          </div>
+          <div class="contact-form__group">
+            <input type="email" name="email" id="email" placeholder="Email Address" class="text-input">
+          </div>
+          <div class="contact-form__group">
+            <input type="tel" name="phone" id="phone" placeholder="Phone" class="text-input">
+          </div>
+          <div class="contact-form__group">
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+          </div>
+          <div class="contact-form__gr contact-form__submit">
+            <input type="submit" value="Submit" class="submit-input">
+          </div>
+        </form>
+      </div>
+    </article>
 
-  Name
-  Email address
-  Phone
-  Your message
-  Submit
+    <article class="countries countries-contact">
+      <div class="countries-content">
+        <div class="countries-content__image countries-content__left">
+          <img src="./assets/shared/desktop/illustration-canada.svg" alt="Toronto Canada">
+        </div>
+        <h3 class="countries-content__heading">Canada</h3>
+        <a href="#" class="countries-content__link">See location</a>
+      </div>
+      <div class="countries-content">
+        <div class="countries-content__image countries-content__center">
+          <img src="./assets/shared/desktop/illustration-australia.svg" alt="Sydney Australia">
+        </div>
+        <h3 class="countries-content__heading">Australia</h3>
+        <a href="#" class="countries-content__link">See location</a>
+      </div>
+      <div class="countries-content">
+        <div class="countries-content__image countries-content__right">
+          <img src="./assets/shared/desktop/illustration-united-kingdom.svg" alt="London UK">
+        </div>
+        <h3 class="countries-content__heading">United Kingdom</h3>
+        <a href="#" class="countries-content__link">See location</a>
+      </div>
+    </article>
+  </section>
 
-  Canada
-  See location
-
-  Australia
-  See location
-
-  United Kingdom
-  See location
-
-  Our company
-  Locations
-  Contact
-
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
-
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
+  <footer class="footer contact-footer">
+    <section class="footer-top">
+      <div class="footer-top__logo">
+        <a href="/">
+          <img src="./assets/shared/desktop/logo-light.png" alt="Footer Logo">
+        </a>
+      </div>
+      <div class="footer-top__links">
+        <ul>
+          <li class="footer-top__links--link">
+            <a href="./about.html">Our company</a>
+          </li>
+          <li class="footer-top__links--link">
+            <a href="./locations.html">Locations</a>
+          </li>
+          <li class="footer-top__links--link">
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="footer-bottom">
+      <div class="footer-bottom__content footer-bottom__address">
+        <p class="footer-bottom__content--text">
+          <span class="footer-bottom__content--text-1">Designo Central Office</span>
+          <span class="footer-bottom__content--text-2">3886 Wellington Street</span>
+          <span class="footer-bottom__content--text-3">Toronto, Ontario M9C 3J5</span>
+        </p>
+      </div>
+      <div class="footer-bottom__content footer-bottom__contact">
+        <p class="footer-bottom__content--text">
+          <span class="footer-bottom__content--text-1">Contact Us (Central Office)</span>
+          <span class="footer-bottom__content--text-2">P : +1 253-863-8967</span>
+          <span class="footer-bottom__content--text-3">M : contact@designo.co</span>
+        </p>
+      </div>
+      <div class="footer-bottom__media">
+        <ul>
+          <li class="footer-bottom__media--content">
+            <a href="">
+              <img src="./assets/shared/desktop/icon-facebook.svg" alt="Facebook Icon">
+            </a>
+          </li>
+          <li class="footer-bottom__media--content">
+            <a href="">
+              <img src="./assets/shared/desktop/icon-instagram.svg" alt="Instagram Logo">
+            </a>
+          </li>
+          <li class="footer-bottom__media--content">
+            <a href="">
+              <img src="./assets/shared/desktop/icon-twitter.svg" alt="Twitter Icon">
+            </a>
+          </li>
+          <li class="footer-bottom__media--content">
+            <a href="">
+              <img src="./assets/shared/desktop/icon-pinterest.svg" alt="Pinterest Icon">
+            </a>
+          </li>
+          <li class="footer-bottom__media--content">
+            <a href="">
+              <img src="./assets/shared/desktop/icon-youtube.svg" alt="Youtube Icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </footer>
 </body>
 </html>

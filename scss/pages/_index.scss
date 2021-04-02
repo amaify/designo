@@ -270,16 +270,12 @@
     }
 
     &::after {
-        content: "";
-        width: 50px;
-        height: 20px;
-        background: $light-grey-2;
+        content: url("../../assets/shared/desktop/bg-pattern-leaf.svg");
         position: absolute;
-        border-radius: 25px;
-        transform: scale(23);
+        top: 30%;
+        left: 32%;
+        transform: rotate(180deg);
         z-index: -1;
-        top: 78%;
-        right: 33%;
     }
 }
 
@@ -290,7 +286,7 @@
     left: 10%;
     width: 80%;
     margin: 0 auto;
-    z-index: 1;
+    z-index: 2;
 
     &-content {
         background: $peach;

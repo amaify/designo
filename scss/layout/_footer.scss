@@ -2,6 +2,7 @@
     background: $black;
     padding: 15rem 10rem 5rem 10rem;
     position: relative;
+    z-index: 1;
 
     &-top {
         display: flex;
@@ -117,4 +118,8 @@
             }
         }
     }
+}
+
+.contact-footer {
+    padding: 8rem 10rem 11rem 10rem;
 }
