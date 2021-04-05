@@ -13,7 +13,7 @@
     <nav class="nav">
       <div class="nav-logo">
         <a href="/">
-          <img src="./assets/shared/desktop/logo-dark.png" alt="LOGO" class="nav-logo__image">
+          <img src="./assets/shared/desktop/logo-dark.png" alt="Website Logo" class="nav-logo__image">
         </a>
       </div>
       <ul class="nav-link">
@@ -24,6 +24,28 @@
           <a href="./locations.html">Locations</a>
         </li>
         <li class="nav-link__item">
+          <a href="./contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="mobileNav">
+      <div class="mobileNav-logo">
+        <a href="/" class="mobileNav-logo__link">
+          <img src="./assets/shared/desktop/logo-dark.png" alt="Website Logo">
+        </a>
+        <div class="mobileNav-logo__menu">
+          <img src="./assets/shared/mobile/icon-hamburger.svg" alt="Mobile Toggle Icon">
+        </div>
+      </div>
+      <ul class="mobileNav-link">
+        <li class="mobileNav-link__item">
+          <a href="./about.html">Our Company</a>
+        </li>
+        <li class="mobileNav-link__item">
+          <a href="./locations.html">Locations</a>
+        </li>
+        <li class="mobileNav-link__item">
           <a href="./contact.html">Contact</a>
         </li>
       </ul>
@@ -41,7 +63,7 @@
           websites, app design, and engaging brand experiences. Find out more about our services.
         </p>
         <div class="link">
-          <a href="#" class="hero-content__link">Learn more</a>
+          <a href="./about.html" class="hero-content__link">Learn more</a>
         </div>
       </div>
 
@@ -53,7 +75,14 @@
 
       <article class="project">
         <div class="project-content project-content__left">
-          <img src="./assets/home/desktop/image-web-design-large.jpg" alt="Web Design">
+          <!-- <img src="./assets/home/desktop/image-web-design-large.jpg" alt="Web Design"> -->
+          <img 
+            src="./assets/home/desktop/image-web-design-large.jpg" 
+            alt="Web Design Image" 
+            srcset="./assets/home/mobile/image-web-design.jpg 600w, 
+                    ./assets/home/desktop/image-web-design-large.jpg 1000w" 
+            sizes="(max-width: 37.5em) 30vw, 600px"
+            >
           <div class="project-content__texts">
             <h2 class="project-content__texts--heading">Web Design</h2>
             <a href="./web-design.html" class="project-content__texts--link">
@@ -65,7 +94,14 @@
 
         <div class="project-content project-content__right">
           <div class="project-content__top">
-            <img src="./assets/home/desktop/image-app-design.jpg" alt="App Design">
+            <!-- <img src="./assets/home/desktop/image-app-design.jpg" alt="App Design"> -->
+            <img 
+            src="./assets/home/desktop/image-app-design.jpg" 
+            alt="App Design Image" 
+            srcset="./assets/home/mobile/image-app-design.jpg 600w, 
+            ./assets/home/desktop/image-app-design.jpg 1000w" 
+            sizes="(max-width: 37.5em) 30vw, 600px"
+            >
             <div class="project-content__texts">
               <h2 class="project-content__texts--heading">App Design</h2>
               <a href="./app-design.html" class="project-content__texts--link">
@@ -75,7 +111,14 @@
             </div>
           </div>
           <div class="project-content__bottom">
-            <img src="./assets/home/desktop/image-graphic-design.jpg" alt="Graphic Design">
+            <!-- <img src="./assets/home/desktop/image-graphic-design.jpg" alt="Graphic Design"> -->
+            <img 
+            src="./assets/home/desktop/image-graphic-design.jpg" 
+            alt="Graphic Design Image" 
+            srcset="./assets/home/mobile/image-graphic-design.jpg 600w, 
+            ./assets/home/desktop/image-graphic-design.jpg 1000w" 
+            sizes="(max-width: 37.5em) 30vw, 600px"
+            >
             <div class="project-content__texts">
               <h2 class="project-content__texts--heading">Graphic Design</h2>
               <a href="./graphic-design.html" class="project-content__texts--link">
@@ -89,7 +132,9 @@
 
       <article class="quality">
         <div class="quality-content quality-content__left">
-          <img src="./assets/home/desktop/illustration-passionate.svg" alt="Passionate" class="quality-content__image">
+          <div class="quality-content__left--imgContainer">
+            <img src="./assets/home/desktop/illustration-passionate.svg" alt="Passionate" class="quality-content__image">
+          </div>
           <h2 class="quality-content__heading">Passionate</h2>
           <p class="quality-content__text">
             Each project starts with an in-depth brand research to ensure we only create 
@@ -98,7 +143,9 @@
           </p>
         </div>
         <div class="quality-content quality-content__center">
-          <img src="./assets/home/desktop/illustration-resourceful.svg" alt="Passionate" class="quality-content__image">
+          <div class="quality-content__center--imgContainer">
+            <img src="./assets/home/desktop/illustration-resourceful.svg" alt="Passionate" class="quality-content__image">
+          </div>
           <h2 class="quality-content__heading">Resourceful</h2>
           <p class="quality-content__text">
             Everything that we do has a strategic purpose. We use an agile approach in all of 
@@ -107,7 +154,9 @@
           </p>
         </div>
         <div class="quality-content quality-content__right">
-          <img src="./assets/home/desktop/illustration-friendly.svg" alt="Passionate" class="quality-content__image">
+          <div class="quality-content__right--imgContainer">
+            <img src="./assets/home/desktop/illustration-friendly.svg" alt="Passionate" class="quality-content__image">
+          </div>
           <h2 class="quality-content__heading">Friendly</h2>
           <p class="quality-content__text">
             We are a group of enthusiastic folks who know how to put people first. Our success 
@@ -127,7 +176,7 @@
             </p>
           </div>
           <div class="sub-content__words--link">
-            <a href="#" class="btn-link">Get in touch</a>
+            <a href="./contact.html" class="btn-link">Get in touch</a>
           </div>
         </div>
       </article>
@@ -201,4 +250,5 @@
       </section>
     </footer>
 </body>
+<script src="./index.js"></script>
 </html>

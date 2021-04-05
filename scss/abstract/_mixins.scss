@@ -1,29 +1,3 @@
-.main-container {
-    padding: 0 10rem;
-    position: relative;
-
-    &::before {
-        content: url("../../assets/shared/desktop/bg-pattern-leaf.svg");
-        position: absolute;
-        top: 13%;
-        left: 0;
-        z-index: -1;
-    }
-}
-
-.btn-link {
-    padding: 1.2rem 1.6rem;
-    background: $white;
-    border-radius: 8px;
-    transition: all 0.3s;
-
-    &:hover {
-        background: $light-peach;
-        color: $white;
-    }
-}
-
-
 @mixin overlay {
     &::after {
         content: "";
@@ -59,4 +33,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
   
+}
+
+@mixin responsive__mode ($breakpoint) {
+    @if ($breakpoint == tablet-portrait) {
+        @media only screen and (min-width: 37.5rem){@content}
+    }
 }

@@ -11,6 +11,31 @@
 body {
     font-family: 'Jost', sans-serif;
     overflow-x: hidden;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 3;
+        display: none;
+    }
+}
+
+// .remove-backdrop {
+//     &::before {
+//         content: "";
+//         display: none;
+//     }
+// }
+
+.add-backdrop {
+    &::before {
+        content: "";
+        display: block;
+    }
 }
 
 html {
