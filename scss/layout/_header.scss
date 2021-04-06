@@ -5,11 +5,13 @@
     left: 0;
     z-index: 4;
     box-shadow: 0 5px 12px 1px rgba(0, 0, 0, 0.1);
+    width: 100%;
 
     @include responsive__mode(tablet-portrait) {
         padding: 4rem 10rem;
         position: static;
         box-shadow: none;
+        width: auto;
     }
 }
 

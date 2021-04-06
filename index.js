@@ -10,6 +10,7 @@ window.onload = menu.innerHTML = hamburger;
 function openNav() {
     body.classList.add("add-backdrop");
     navItems.style.display = "block";
+    menu.classList.toggle("transparent")
 
     menu.innerHTML = closeMenu
 }
@@ -21,9 +22,8 @@ function closeNav() {
     menu.innerHTML = hamburger
 }
 
+
 menu.addEventListener('click', () => {
     menu.innerHTML === hamburger ? openNav() : closeNav()
 })
-
-// console.log(body);
 

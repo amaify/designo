@@ -28,6 +28,28 @@
         </li>
       </ul>
     </nav>
+
+    <nav class="mobileNav">
+      <div class="mobileNav-logo">
+        <a href="/" class="mobileNav-logo__link">
+          <img src="./assets/shared/desktop/logo-dark.png" alt="Website Logo">
+        </a>
+        <div class="mobileNav-logo__menu">
+          <!-- <img src="./assets/shared/mobile/icon-hamburger.svg" alt="Mobile Toggle Icon"> -->
+        </div>
+      </div>
+      <ul class="mobileNav-link">
+        <li class="mobileNav-link__item">
+          <a href="./about.html">Our Company</a>
+        </li>
+        <li class="mobileNav-link__item">
+          <a href="./locations.html">Locations</a>
+        </li>
+        <li class="mobileNav-link__item">
+          <a href="./contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <section class="main-container">
     <article class="about">
@@ -41,13 +63,27 @@
         </p>
       </div>
       <div class="about-intro about-intro__right">
-        <img src="./assets/about/desktop/image-about-hero.jpg" alt="About Hero">
+        <!-- <img src="./assets/about/desktop/image-about-hero.jpg" alt="About Hero"> -->
+        <img 
+            src="./assets/about/desktop/image-about-hero.jpg" 
+            alt="About hero" 
+            srcset="./assets/about/mobile/image-about-hero.jpg 600w, 
+            ./assets/about/desktop/image-about-hero.jpg 1000w" 
+            sizes="(max-width: 37.5em) 30vw, 600px"
+            >
       </div>
     </article>
 
     <article class="world">
       <div class="world-content world-content__left">
-        <img src="./assets/about/desktop/image-world-class-talent.jpg" alt="World-class Talent">
+        <!-- <img src="./assets/about/desktop/image-world-class-talent.jpg" alt="World-class Talent"> -->
+        <img 
+            src="./assets/about/desktop/image-world-class-talent.jpg" 
+            alt="About hero" 
+            srcset="./assets/about/mobile/image-world-class-talent.jpg 600w, 
+            ./assets/about/desktop/image-world-class-talent.jpg 1000w" 
+            sizes="(max-width: 37.5em) 30vw, 600px"
+            >
       </div>
       <div class="world-content world-content__right">
         <div class="world-content__content">
@@ -112,7 +148,14 @@
         </div>
       </div>
       <div class="deal-content deal-content__right">
-        <img src="./assets/about/desktop/image-real-deal.jpg" alt="Images on a wall">
+        <!-- <img src="./assets/about/desktop/image-real-deal.jpg" alt="Images on a wall"> -->
+        <img 
+            src="./assets/about/desktop/image-real-deal.jpg" 
+            alt="Images on a wall" 
+            srcset="./assets/about/mobile/image-real-deal.jpg 600w, 
+            ./assets/about/desktop/image-real-deal.jpg 1000w" 
+            sizes="(max-width: 37.5em) 30vw, 600px"
+            >
       </div>
     </article>
 
@@ -199,4 +242,5 @@
     </section>
   </footer>
 </body>
+<script src="./index.js"></script>
 </html>

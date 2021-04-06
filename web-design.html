@@ -17,13 +17,35 @@
         </a>
       </div>
       <ul class="nav-link">
-        <li class="nav-link__item">
+        <li class="nav-link__item"> 
           <a href="./about.html">Our Company</a>
         </li>
         <li class="nav-link__item">
           <a href="./locations.html">Locations</a>
         </li>
         <li class="nav-link__item">
+          <a href="./contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="mobileNav">
+      <div class="mobileNav-logo">
+        <a href="/" class="mobileNav-logo__link">
+          <img src="./assets/shared/desktop/logo-dark.png" alt="Website Logo">
+        </a>
+        <div class="mobileNav-logo__menu">
+          <!-- <img src="./assets/shared/mobile/icon-hamburger.svg" alt="Mobile Toggle Icon"> -->
+        </div>
+      </div>
+      <ul class="mobileNav-link">
+        <li class="mobileNav-link__item">
+          <a href="./about.html">Our Company</a>
+        </li>
+        <li class="mobileNav-link__item">
+          <a href="./locations.html">Locations</a>
+        </li>
+        <li class="mobileNav-link__item">
           <a href="./contact.html">Contact</a>
         </li>
       </ul>
@@ -110,7 +132,14 @@
 
     <article class="design-links">
       <div class="design-links__content">
-        <img src="./assets/home/desktop/image-app-design.jpg" alt="App Design">
+        <!-- <img src="./assets/home/desktop/image-app-design.jpg" alt="App Design"> -->
+        <img 
+            src="./assets/home/desktop/image-app-design.jpg" 
+            alt="App Design Image" 
+            srcset="./assets/home/mobile/image-app-design.jpg 600w, 
+            ./assets/home/desktop/image-app-design.jpg 1000w" 
+            sizes="(max-width: 37.5em) 30vw, 600px"
+            >
         <div class="design-links__content--text">
           <h2 class="design-links__content--text-heading">App Design</h2>
           <a href="./app-design.html" class="design-links__content--text-link">
@@ -120,7 +149,14 @@
         </div>
       </div>
       <div class="design-links__content">
-        <img src="./assets/home/desktop/image-graphic-design.jpg" alt="App Design">
+        <!-- <img src="./assets/home/desktop/image-graphic-design.jpg" alt="App Design"> -->
+        <img 
+            src="./assets/home/desktop/image-graphic-design.jpg" 
+            alt="Graphic Design Image" 
+            srcset="./assets/home/mobile/image-graphic-design.jpg 600w, 
+            ./assets/home/desktop/image-graphic-design.jpg 1000w" 
+            sizes="(max-width: 37.5em) 30vw, 600px"
+            >
         <div class="design-links__content--text">
           <h2 class="design-links__content--text-heading">Graphic Design</h2>
           <a href="./graphic-design.html" class="design-links__content--text-link">
@@ -141,7 +177,7 @@
           </p>
         </div>
         <div class="sub-content__words--link">
-          <a href="#" class="btn-link">Get in touch</a>
+          <a href="./contact.html" class="btn-link">Get in touch</a>
         </div>
       </div>
     </article>
@@ -215,4 +251,5 @@
     </section>
   </footer>
 </body>
+<script src="./index.js"></script>
 </html>

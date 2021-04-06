@@ -1,91 +1,162 @@
 .about {
     display: flex;
+    flex-direction: column-reverse;
+    // padding: 0 2rem;
     position: relative;
     overflow: hidden;
-    margin-bottom: 15rem;
+    margin-bottom: 0;
+    margin-top: 8rem;
 
     &-intro {
 
         &__left {
             background: $peach;
-            border-top-left-radius: 12px;
-            border-bottom-left-radius: 12px;
-            width: 65%;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;  
+            width: 100%;
             color: $white;
 
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 0 0 0 10rem;
+            text-align: center;
+            padding: 5rem 3rem 5rem 3rem;
         }
 
         &__right {
-            width: 35%;
+            width: 100%;
 
             & img {
                 width: 100%;
                 object-fit: cover;
                 display: block;
-                border-top-right-radius: 12px;
-                border-bottom-right-radius: 12px;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
             }
         }
 
         &__heading {
-            font-size: 5rem;
+            font-size: 3rem;
             text-transform: capitalize;
             margin-bottom: 2rem;
+            font-weight: 500;
         }
 
         &__text {
-            font-size: 1.5rem;
-            width: 52%;
+            font-size: 1.2rem;
+            width: 100%;
             line-height: 2.5rem;
         }
     }
 
     &::after {
-        content: url("../../assets/about/desktop/bg-pattern-hero-about-desktop.svg");
+        content: url("../../assets/about/mobile/bg-pattern-hero-about-mobile.svg");
         position: absolute;
-        top: -37%;
-        left: 16.5%;
+        top: 24%;
+        left: -134%;
+        // transform: scale(0.5);
     }
 
     &-sub {
-        bottom: -18% !important;
+        // bottom: -14% !important;
+        bottom: -485px !important;
+    }
+
+    @include responsive__mode(tablet-portrait) {
+        // display: flex;
+        flex-direction: row;
+        // padding: 0 0;
+        position: relative;
+        // overflow: hidden;
+        margin-bottom: 15rem;
+        margin-top: 0;
+
+        &-intro {
+
+            &__left {
+                // background: $peach;
+                border-top-left-radius: 12px;
+                border-bottom-left-radius: 12px;
+                width: 65%;
+                // color: $white;
+
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                text-align: left;
+                padding: 0 0 0 10rem;
+            }
+
+            &__right {
+                width: 35%;
+
+                & img {
+                    // width: 100%;
+                    // object-fit: cover;
+                    // display: block;
+                    border-top-right-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                }
+            }
+
+            &__heading {
+                font-size: 5rem;
+                // text-transform: capitalize;
+                margin-bottom: 2rem;
+            }
+
+            &__text {
+                font-size: 1.5rem;
+                width: 52%;
+                line-height: 2.5rem;
+            }
+        }
+
+        &::after {
+            content: url("../../assets/about/desktop/bg-pattern-hero-about-desktop.svg");
+            position: absolute;
+            top: -37%;
+            left: 16.5%;
+        }
+
+        &-sub {
+            bottom: -18% !important;
+        }
     }
 }
 
 .world {
     display: flex;
+    flex-direction: column;
     margin-bottom: 15rem;
 
     &-content {
 
         &__left {
-            width: 30%;
+            width: 100%;
             position: relative;
             z-index: 1;
         }
 
         &__right {
             background: $lighter-peach;
-            width: 70%;
-            border-top-right-radius: 12px;
-            border-bottom-right-radius: 12px;
+            width: 100%;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
             position: relative;
             overflow: hidden;
 
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-left: 15rem;
+            padding: 7rem 2rem; 
+            text-align: center;
 
             &::after {
-                content: url("../../assets/shared/desktop/bg-pattern-two-circles.svg");
+                content: url("../../assets/shared/desktop/bg-pattern-three-circles.svg");
                 position: absolute;
-                top: 45.5%;
-                left: -10%;
+                top: -16.5%;
+                left: 0;
                 z-index: 0;
             }
         }
@@ -94,12 +165,12 @@
             width: 100%;
             object-fit: cover;
             display: block;
-            border-top-left-radius: 12px;
-            border-bottom-left-radius: 12px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
         }
 
         &__content {
-            width: 60%;
+            width: 100%;
         }
 
         &__heading {
@@ -111,7 +182,7 @@
 
         &__text {
             color: $dark-grey;
-            font-size: 1.7rem;
+            font-size: 1.4rem;
             font-weight: 300;
 
             & span {
@@ -123,24 +194,100 @@
             }
         }
     }
+
+    @include responsive__mode(tablet-portrait) {
+        // display: flex;
+        flex-direction: row;
+        // margin-bottom: 15rem;
+
+        &-content {
+
+            &__left {
+                width: 30%;
+                // position: relative;
+                // z-index: 1;
+            }
+
+            &__right {
+                // background: $lighter-peach;
+                width: 70%;
+                border-top-right-radius: 12px;
+                border-bottom-right-radius: 12px;
+                // position: relative;
+                // overflow: hidden;
+
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                padding: 0 0 0 15rem;
+                text-align: left;
+
+                &::after {
+                    content: url("../../assets/shared/desktop/bg-pattern-two-circles.svg");
+                    position: absolute;
+                    top: 45.5%;
+                    left: -10%;
+                    z-index: 0;
+                }
+            }
+
+            & img {
+                // width: 100%;
+                // object-fit: cover;
+                // display: block;
+                border-top-left-radius: 12px;
+                border-bottom-left-radius: 12px;
+            }
+
+            &__content {
+                width: 60%;
+            }
+
+            &__heading {
+                font-size: 3.5rem;
+                font-weight: 400;
+                // color: $peach;
+                // margin-bottom: 3rem;
+            }
+
+            &__text {
+                // color: $dark-grey;
+                font-size: 1.7rem;
+                // font-weight: 300;
+
+                & span {
+                    display: block;
+
+                    &:not(:last-child) {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .countries {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     margin-bottom: 15rem;
     position: relative;
     z-index: 1;
 
     &-content {
-        width: 32%;
+        width: 100%;
         text-align: center;
         position: relative;
 
+        &:not(:last-child) {
+            margin-bottom: 10rem;
+        }
+
        &__image {
             width: 40%;
-            margin: 0 auto 3rem auto;
+            margin: 0 auto 5rem auto;
 
             & img {
                 width: 100%;
@@ -148,7 +295,7 @@
        }
 
        &__heading {
-           font-size: 2.5rem;
+           font-size: 2rem;
            text-transform: uppercase;
            color: $dark-grey;
            font-weight: 300;
@@ -167,15 +314,15 @@
            transition: all 0.3s;
            text-transform: uppercase;
 
-           &:hover {
-               background: $light-peach;
-           }
+        //    &:hover {
+        //        background: $light-peach;
+        //    }
        }
 
        &__left::after {
             content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
             position: absolute;
-            top: -8%;
+            top: -11%;
             left: 24%;
             transform: rotate(90deg);
        }
@@ -183,84 +330,167 @@
        &__center::after {
             content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
             position: absolute;
-            top: -8%;
-            left: 28%;
+            top: -15%;
+            left: 24%;
        }
 
        &__right::after {
             content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
             position: absolute;
-            top: -8%;
-            left: 28%;
+            top: -12%;
+            left: 24%;
             transform: rotate(-90deg);
        }
     }
 
-    &::after {
-        content: url("../../assets/shared/desktop/bg-pattern-leaf.svg");
-        position: absolute;
-        top: 57%;
-        left: 57%;
-        z-index: -1;
+    // &::after {
+    //     content: url("../../assets/shared/desktop/bg-pattern-leaf.svg");
+    //     position: absolute;
+    //     top: 57%;
+    //     left: 57%;
+    //     z-index: -1;
+    // }
+
+    @include responsive__mode(tablet-portrait) {
+        // display: flex;
+        // flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 15rem;
+        // position: relative;
+        // z-index: 1;
+
+        &-content {
+            width: 32%;
+            text-align: center;
+            // position: relative;
+
+        &__image {
+            width: 40%;
+            margin: 0 auto 3rem auto;
+
+            // & img {
+            //     width: 100%;
+            // }
+        }
+
+        &__heading {
+            font-size: 2.5rem;
+            // text-transform: uppercase;
+            // color: $dark-grey;
+            font-weight: 300;
+            margin-bottom: 3.5rem;
+            // letter-spacing: 0.6rem;
+        }
+
+        &__link {
+            // text-decoration: none;
+            // background: $peach;
+            // padding: 1.2rem 1.4rem;
+            // color: $white;
+            // border-radius: 4px;
+            // font-size: 1.5rem;
+            // font-weight: 300;
+            // transition: all 0.3s;
+            // text-transform: uppercase;
+
+            &:hover {
+                background: $light-peach;
+            }
+        }
+
+        &__left::after {
+            content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+            position: absolute;
+            top: -8%;
+            left: 24%;
+            transform: rotate(90deg);
+        }
+
+        &__center::after {
+            content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+            position: absolute;
+            top: -8%;
+            left: 28%;
+        }
+
+        &__right::after {
+            content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+            position: absolute;
+            top: -8%;
+            left: 28%;
+            transform: rotate(-90deg);
+        }
+        }
+
+        &::after {
+            content: url("../../assets/shared/desktop/bg-pattern-leaf.svg");
+            position: absolute;
+            top: 57%;
+            left: 57%;
+            z-index: -1;
+        }
     }
 }
 
 .deal {
     display: flex;
+    flex-direction: column-reverse;
     position: relative;
     z-index: 1;
     margin-bottom: 35rem;
 
     &-content {
-        
 
         &__left {
-            width: 70%;
-            border-top-left-radius: 12px;
-            border-bottom-left-radius: 12px;
+            width: 100%;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
             background: $lighter-peach;
             position: relative;
+            overflow: hidden;
 
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-left: 15rem;
+            padding: 7rem 2rem;
+            text-align: center;
 
             &::after {
-                content: url("../../assets/shared/desktop/bg-pattern-two-circles.svg");
+                content: url("../../assets/shared/desktop/bg-pattern-three-circles.svg");
                 position: absolute;
-                bottom: 0;
-                left: 1%;
+                top: -16.5%;
+                left: 0;
                 z-index: 0;
             }
         }
 
         &__right {
-            width: 30%;
+            width: 100%;
 
             & img {
                 width: 100%;
                 display: block;
                 object-fit: cover;
 
-                border-top-right-radius: 12px;
-                border-bottom-right-radius: 12px;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
             }
         }
 
         &__texts {
             // padding: 0 10rem;
-            width: 60%;
+            width: 100%;
 
             &--heading {
-                font-size: 4rem;
+                font-size: 3rem;
                 color: $peach;
                 margin-bottom: 3rem;
                 font-weight: 400;
             }
 
             &--text {   
-                font-size: 1.7rem;
+                font-size: 1.4rem;
                 color: $dark-grey;
                 font-weight: 300;
 
@@ -269,6 +499,78 @@
 
                     &:not(:last-child) {
                         margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive__mode(tablet-portrait) {
+        // display: flex;
+        flex-direction: row;
+        // position: relative;
+        // z-index: 1;
+        // margin-bottom: 35rem;
+    
+        &-content {
+    
+            &__left {
+                width: 70%;
+                border-top-left-radius: 12px;
+                border-bottom-left-radius: 12px;
+                // background: $lighter-peach;
+                // position: relative;
+    
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                padding: 0 0 0 15rem;
+                text-align: left;
+    
+                &::after {
+                    content: url("../../assets/shared/desktop/bg-pattern-two-circles.svg");
+                    position: absolute;
+                    bottom: 0;
+                    left: 1%;
+                    z-index: 0;
+                }
+            }
+    
+            &__right {
+                width: 30%;
+    
+                & img {
+                    // width: 100%;
+                    // display: block;
+                    // object-fit: cover;
+    
+                    border-top-right-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                }
+            }
+    
+            &__texts {
+                // padding: 0 10rem;
+                width: 60%;
+    
+                &--heading {
+                    font-size: 4rem;
+                    // color: $peach;
+                    margin-bottom: 3rem;
+                    // font-weight: 400;
+                }
+    
+                &--text {   
+                    font-size: 1.7rem;
+                    // color: $dark-grey;
+                    font-weight: 300;
+    
+                    & span {
+                        display: block;
+    
+                        &:not(:last-child) {
+                            margin-bottom: 2rem;
+                        }
                     }
                 }
             }

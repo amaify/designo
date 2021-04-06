@@ -394,10 +394,10 @@
             // &::before {
             //     content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
             //     position: absolute;
-            //     // top: 13%;
-            //     // left: 8%;
-            //     top: 0; 
-            //     left: 0;
+            //     top: 13%;
+            //     left: 8%;
+            //     // top: -25%; 
+            //     // left: 0;
             // }
         }
 
@@ -459,7 +459,8 @@
 .sub {
     overflow: hidden;
     position: absolute;
-    bottom: -10.5%;
+    // bottom: -10.5%;
+    bottom: -335px;
     left: 10%;
     width: 80%;
     margin: 0 auto;
