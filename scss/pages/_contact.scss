@@ -148,14 +148,158 @@
     @include responsive__mode(tablet-portrait) {
         background: $peach;
         border-radius: 12px;
-        display: flex;
+        // display: flex;
+        flex-direction: column;
+        margin-bottom: 15rem;
+        margin-top: 0;
+        padding: 6rem 5rem 10rem 5rem;
+        // position: relative;
+        // z-index: 0;
+        // overflow: hidden;
+
+        &::after {
+            content: url("../../assets/contact/desktop/bg-pattern-hero-desktop.svg");
+            position: absolute;
+            top: -13%;
+            left: -15%;
+            z-index: -1;
+            transform: scale(1)
+        }
+
+        &-intro {
+            color: $white;
+
+            &__heading {
+                font-size: 3.5rem;
+                text-transform: capitalize;
+                margin-bottom: 1.5rem;
+                font-weight: 400;
+            }
+
+            &__text {
+                font-size: 1.6rem;
+                width: 100%;
+                line-height: 3rem;
+            }
+
+            &__left {
+                width: 100%;
+                margin-right: auto;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: left;
+                margin-bottom: 3rem;
+            }
+
+            &__right {
+                width: 100%;
+            }
+        }
+
+        &-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            &__group {
+                display: flex;
+                border-bottom: 1px solid $light-grey;
+
+                // & {
+                //     border-bottom: 3px solid $light-grey;
+                // }
+
+                &--error {
+                    display: flex;
+                    width: 28%;
+                    font-style: italic;
+                    opacity: 0;
+
+                    &-text {
+                        margin-right: 1.5rem;
+                        align-self: center;
+                    }
+
+                    // &-icon {
+                        
+                    // }
+                }
+
+                // & input, textarea {
+                //     background: transparent;
+                //     outline: none;
+                //     color: $light-grey;
+
+                //     &::placeholder {
+                //         color: $light-grey;
+                //         font-family: 'Jost', sans-serif;;
+                //     }
+                // }
+
+                & input[class^="text"], & textarea {
+                    width: 80%;
+                    // padding: 0 0 1rem 1rem;
+                    // margin-right: auto;
+                    // border-left: none;
+                    // border-right: none;
+                    // border-top: none;
+                    // border-bottom: 1px solid $light-grey;
+                    border: none;
+
+                    // &:focus {
+                    //     border-bottom: 3px solid $light-grey;
+                    // }
+                }
+
+                // & textarea {
+                //     margin-bottom: 1.5rem;
+                //     padding: 2rem 0 0 1rem;
+                //     border-top: none;
+                // }
+
+                // & input[type="tel"], & input[type="email"] {
+                //     padding-top: 2rem;
+                // }
+            }
+
+            &__submit {
+                // display: flex;
+                justify-content: flex-end;
+                margin-top: 2rem;
+
+                & input[type="submit"] {
+                    background: $white;
+                    text-transform: uppercase;
+                    padding: 1.5rem 2.5rem;
+                    // border: none;
+                    // outline: none;
+                    // border-radius: 4px;
+                    // color: $black;
+                    // cursor: pointer;
+                    // transition: all 0.3s;
+
+                    // &:hover {
+                    //     background: $light-peach;
+                    //     color: $white;
+                    // }
+                }
+            }
+        }
+    }
+
+    @include responsive__mode(tablet) {
+        // background: $peach;
+        border-radius: 12px;
+        // display: flex;
         flex-direction: row;
         margin-bottom: 25rem;
         margin-top: 0;
         padding: 6rem 8rem 10rem 8rem;
-        position: relative;
-        z-index: 0;
-        overflow: hidden;
+        // position: relative;
+        // z-index: 0;
+        // overflow: hidden;
 
         &::after {
             content: url("../../assets/contact/desktop/bg-pattern-hero-desktop.svg");
@@ -167,7 +311,7 @@
         }
 
         &-intro {
-            color: $white;
+            // color: $white;
 
             &__heading {
                 font-size: 5rem;
@@ -186,10 +330,10 @@
                 width: 65%;
                 margin-right: auto;
 
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: left;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                // text-align: left;
                 margin-bottom: 0;
             }
 
@@ -227,16 +371,16 @@
                     // }
                 }
 
-                & input, textarea {
-                    background: transparent;
-                    outline: none;
-                    color: $light-grey;
+                // & input, textarea {
+                //     background: transparent;
+                //     outline: none;
+                //     color: $light-grey;
 
-                    &::placeholder {
-                        color: $light-grey;
-                        font-family: 'Jost', sans-serif;;
-                    }
-                }
+                //     &::placeholder {
+                //         color: $light-grey;
+                //         font-family: 'Jost', sans-serif;;
+                //     }
+                // }
 
                 & input[class^="text"], & textarea {
                     width: 80%;
@@ -265,20 +409,20 @@
             }
 
             &__submit {
-                display: flex;
-                justify-content: flex-end;
+                // display: flex;
+                // justify-content: flex-end;
                 margin-top: 2rem;
 
                 & input[type="submit"] {
                     background: $white;
                     text-transform: uppercase;
                     padding: 1.5rem 2.5rem;
-                    border: none;
-                    outline: none;
-                    border-radius: 4px;
-                    color: $black;
-                    cursor: pointer;
-                    transition: all 0.3s;
+                    // border: none;
+                    // outline: none;
+                    // border-radius: 4px;
+                    // color: $black;
+                    // cursor: pointer;
+                    // transition: all 0.3s;
 
                     &:hover {
                         background: $light-peach;
@@ -291,7 +435,7 @@
 }
 
 .countries-contact::after {
-    top: 44%;
-    left: 31%;
+    top: 80%;
+    left: 33%;
     transform: scale(1.2);
 }

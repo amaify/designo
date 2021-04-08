@@ -8,6 +8,13 @@
     width: 100%;
 
     @include responsive__mode(tablet-portrait) {
+        padding: 4rem 2rem;
+        position: static;
+        box-shadow: none;
+        width: auto;
+    }
+
+    @include responsive__mode(tablet) {
         padding: 4rem 10rem;
         position: static;
         box-shadow: none;
@@ -19,15 +26,20 @@
     padding: 0;
     position: relative;
 
-    &::before {
-        content: url("../../assets/shared/desktop/bg-pattern-leaf.svg");
-        position: absolute;
-        top: 13%;
-        left: 0;
-        z-index: -1;
+    @include responsive__mode(tablet-portrait) {
+        padding: 0 2rem;
     }
 
-    @include responsive__mode(tablet-portrait) {
+    @include responsive__mode(tablet) {
+        
+        &::before {
+            content: url("../../assets/shared/desktop/bg-pattern-leaf.svg");
+            position: absolute;
+            top: 13%;
+            left: 0;
+            z-index: -1;
+        }
+
         padding: 0 10rem;
     }
 }
@@ -39,7 +51,7 @@
     transition: all 0.3s;
 
     
-    @include responsive__mode(tablet-portrait) {
+    @include responsive__mode(tablet) {
         &:hover {
             background: $light-peach;
             color: $white;

@@ -36,7 +36,11 @@
 }
 
 @mixin responsive__mode ($breakpoint) {
-    @if ($breakpoint == tablet-portrait) {
+    @if $breakpoint == tablet-portrait {
         @media only screen and (min-width: 37.5rem){@content}
-    }
+    };
+
+    @if $breakpoint == tablet {
+        @media only screen and (min-width: 50.3125rem){@content}
+    };
 }

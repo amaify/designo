@@ -15,6 +15,10 @@
             width: 100%;
             object-fit: cover;
         }
+
+        @include responsive__mode(tablet-portrait) {
+            width: 25%;
+        }
     }
 
     &-link {
@@ -43,9 +47,11 @@
                     transition: all 0.3s;
                 }
 
-                &:hover {
-                    &::after {
-                        width: 100%;
+                @include responsive__mode(tablet) {
+                    &:hover {
+                        &::after {
+                            width: 100%;
+                        }
                     }
                 }
             }
