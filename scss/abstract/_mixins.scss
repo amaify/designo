@@ -43,4 +43,8 @@
     @if $breakpoint == tablet {
         @media only screen and (min-width: 50.3125rem){@content}
     };
+
+    @if $breakpoint == tablet-medium {
+        @media only screen and (min-width: 75rem){@content}
+    };
 }

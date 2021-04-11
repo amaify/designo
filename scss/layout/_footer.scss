@@ -9,6 +9,10 @@
     }
 
     @include responsive__mode(tablet) {
+        padding: 15rem 3rem 5rem 3rem;
+    }
+
+    @include responsive__mode(tablet-medium) {
         padding: 15rem 10rem 5rem 10rem;
     }
 
@@ -46,6 +50,16 @@
             @include responsive__mode(tablet) {
                 // margin-right: auto;
                 margin: 0 auto 0 0;
+                width: 20%;
+
+                // & img {
+                //     width: 100%;
+                // }
+            }
+
+            @include responsive__mode(tablet-medium) {
+                // margin-right: auto;
+                // margin: 0 auto 0 0;
                 width: 13%;
 
                 // & img {
@@ -185,6 +199,12 @@
 
             @include responsive__mode(tablet) {
                 // margin-right: 25rem;
+                margin: 0 10rem 0 0;
+                // text-align: left;
+            }
+
+            @include responsive__mode(tablet-medium) {
+                // margin-right: 25rem;
                 margin: 0 25rem 0 0;
                 // text-align: left;
             }
@@ -243,6 +263,10 @@
     }
 
     @include responsive__mode(tablet) {
-        padding: 8rem 10rem 11rem 10rem;
+        padding: 8rem 3rem 5rem 3rem;
+    }
+
+    @include responsive__mode(tablet-medium) {
+        padding: 8rem 10rem 7rem 10rem;
     }
 }

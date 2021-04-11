@@ -121,6 +121,10 @@
     }
 
     @include responsive__mode(tablet) {
-        bottom: -28.5%;
+        bottom: -415px;
+    }
+
+    @include responsive__mode(tablet-medium) {
+        bottom: -420px;
     }
 }

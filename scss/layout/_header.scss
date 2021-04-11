@@ -15,10 +15,17 @@
     }
 
     @include responsive__mode(tablet) {
-        padding: 4rem 10rem;
+        padding: 4rem 3rem;
         position: static;
         box-shadow: none;
         width: auto;
+    }
+
+    @include responsive__mode(tablet-medium) {
+        padding: 4rem 10rem;
+        // position: static;
+        // box-shadow: none;
+        // width: auto;
     }
 }
 
@@ -31,6 +38,19 @@
     }
 
     @include responsive__mode(tablet) {
+        
+        // &::before {
+        //     content: url("../../assets/shared/desktop/bg-pattern-leaf.svg");
+        //     position: absolute;
+        //     top: 13%;
+        //     left: 0;
+        //     z-index: -1;
+        // }
+
+        padding: 0 3rem;
+    }
+
+    @include responsive__mode(tablet-medium) {
         
         &::before {
             content: url("../../assets/shared/desktop/bg-pattern-leaf.svg");

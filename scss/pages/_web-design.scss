@@ -252,12 +252,15 @@
 
     @include responsive__mode(tablet){
         flex-direction: row;
-        margin-bottom: 15rem;
+        flex-wrap: wrap;
+        // justify-content: space-between;
+        margin-bottom: 10rem;
 
         &__content {
-            width: 32%;
-            margin-bottom: 2rem;
+            width: 47%;
+            margin-bottom: 2.5rem;
             margin-left: 1.5rem;
+            // margin-right: auto;
             padding: 0 0;
             
             flex-direction: column;
@@ -299,6 +302,76 @@
                     transition: all 0.3s;
 
                     margin-bottom: 0;
+                }
+    
+                // &-text {
+                    // color: $dark-grey;
+                    // font-size: 1.2rem;
+                    // transition: all 0.3s;
+                // }
+    
+                &:hover {
+                    background: $peach;
+                    cursor: pointer;
+                }
+    
+                &:hover &-heading, &:hover &-text {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    @include responsive__mode(tablet-medium){
+        flex-direction: row;
+        justify-content: auto;
+        margin-bottom: 15rem;
+
+        &__content {
+            width: 31%;
+            margin-bottom: 2rem;
+            margin-left: 1.5rem;
+            // padding: 0 0;
+            
+            // flex-direction: column;
+    
+            // &--image {
+            //     margin: 0;
+            //     width: 100%;
+    
+            //     & img {
+            //         width: 100%;
+            //         object-fit: cover;
+            //         border-top-left-radius: 12px;
+            //         border-top-right-radius: 12px;
+            //         // border-top-left-radius: 12px;
+            //         border-bottom-left-radius: 0;
+            //         display: block;
+            //     }
+            // }
+    
+            &--text {
+                // background: $lighter-peach;
+                // text-align: center;
+                padding: 2rem 6rem;
+                // border-bottom-left-radius: 12px;
+                // border-bottom-right-radius: 12px;
+                // border-top-right-radius: 0;
+                // border-bottom-right-radius: 12px;
+                // transition: all 0.3s;
+                // width: 100%;
+
+                // display: block;
+    
+                &-heading {
+                    // color: $peach;
+                    // text-transform: uppercase;
+                    // font-size: 2rem;
+                    // letter-spacing: 5px;
+                    // font-weight: 300;
+                    // transition: all 0.3s;
+
+                    // margin-bottom: 0;
                 }
     
                 // &-text {
@@ -563,6 +636,10 @@
     }
 
     @include responsive__mode(tablet) {
-        bottom: -21.5%;
+        bottom: -415px;
+    }
+
+    @include responsive__mode(tablet-medium) {
+        bottom: -430px;
     }
 }
