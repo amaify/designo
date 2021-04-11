@@ -116,8 +116,9 @@ function submitForm () {
 
         textInput.forEach(input => {
             input.value = '';
-            disableBtn();
         })
+        document.getElementById('message').value = '';
+        disableBtn();
     })
 }
 
