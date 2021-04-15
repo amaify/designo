@@ -5,12 +5,13 @@
     flex-direction: column;
     
     margin-bottom: 10rem;
+    padding: 1rem 0 20rem 0;
     overflow: hidden;
 
     @include responsive__mode(tablet-portrait) {
         // flex-direction: row;
         border-radius: 12px;
-        // padding: 0 0;
+        padding: 0 0;
     }
 
     @include responsive__mode(tablet) {
@@ -19,11 +20,16 @@
         // padding: 0 0;
     }
 
+    @include responsive__mode(tablet-medium) {
+        padding: 6rem 0;
+    }
+
     &-content {
         color: $white;
         width: 100%;
         text-align: center;
         padding: 12rem 3rem;
+        // margin-bottom: 33rem;
         position: relative;
         z-index: 1;
         // padding-left: 10rem;
@@ -61,8 +67,9 @@
         @include responsive__mode(tablet-portrait) {
             width: 100%;
             // margin-right: auto;
-            padding: 12rem 5rem 0 5rem;
+            padding: 5rem 5rem 0 5rem;
             text-align: center;
+            margin-bottom: 550px;
             // display: flex;
             // flex-direction: column;
             // justify-content: center;
@@ -72,13 +79,15 @@
                 margin: 0 auto 3rem auto;
                 line-height: 4rem;
                 font-weight: 400;
-                width: 85%;
+                width: 75%;
             }
 
             &__text {
                 font-size: 1.7rem;
-                margin-bottom: 3rem;
+                // margin-bottom: 3rem;
                 line-height: 2.5rem;
+                width: 80%;
+                margin: 0 auto 3rem auto;
             }
     
             &__link {
@@ -98,11 +107,12 @@
         }
 
         @include responsive__mode(tablet) {
-            width: 70%;
+            width: 60%;
             margin-right: auto;
             padding: 10rem 5rem 10rem 5rem;
             text-align: left;
             display: flex;
+            margin-bottom: 0;
             flex-direction: column;
             justify-content: center;
 
@@ -116,6 +126,7 @@
 
             &__text {
                 font-size: 1.4rem;
+                margin: 0 0 3rem 0;
                 // margin-bottom: 3rem;
                 // line-height: 2.5rem;
             }
@@ -137,7 +148,7 @@
         }
 
         @include responsive__mode(tablet-medium) {
-            width: 100%;
+            width: 60%;
             // margin-right: auto;
             padding-left: 10rem;
             // text-align: left;
@@ -146,9 +157,9 @@
             // justify-content: center;
 
             &__heading {
-                font-size: 4rem;   
+                font-size: 6rem;   
                 margin: 0 0 2rem 0;
-                line-height: auto;
+                line-height: 6rem;
                 width: auto;
                 // font-weight: 400;
             }
@@ -156,7 +167,8 @@
             &__text {
                 font-size: 1.7rem;
                 // margin-bottom: 3rem;
-                // line-height: 2.5rem;
+                line-height: 2.5rem;
+                width: 70%;
             }
     
             &__link {
@@ -177,34 +189,36 @@
     }
 
     &-image {
-        // width: 60%;
+        // width: 100%;
         // position: relative;
 
         &__img {
             width: 100%;
-            height: 100%;
+            // height: 100%;
             object-fit: cover;
             position: absolute;
-            top: 40%;
+            top: 56%;
+            // top: 510px;
             right: 0;
             z-index: 0;
+            // transform: scale(1.1);
 
             @include responsive__mode(tablet-portrait) {
                 width: 100%;
                 // height: 100%;
                 // object-fit: cover;
                 // position: absolute;
-                top: 40%;
+                top: 27%;
                 right: 0;
                 // z-index: 0;
             }
 
             @include responsive__mode(tablet) {
-                width: 30%;
+                width: 40%;
                 // height: 100%;
                 // object-fit: cover;
                 // position: absolute;
-                top: 22%;
+                top: 10%;
                 right: 0;
                 // z-index: 0;
             }
@@ -214,11 +228,53 @@
                 // height: 100%;
                 // object-fit: cover;
                 // position: absolute;
-                top: 22%;
+                top: 10%;
                 right: 0;
                 // z-index: 0;
             }
         }
+
+        &::before {
+            content: url("../../assets/home/desktop/bg-pattern-hero-home.svg");
+            position: absolute;
+            // width: 40%;
+            top: 21%;
+            right: -71%;
+            // display: block;
+        }
+
+        @include responsive__mode(tablet-portrait) {
+            &::before {
+                // content: url("../../assets/home/desktop/bg-pattern-hero-home.svg");
+                // position: absolute;
+                // width: 40%;
+                top: 10%;
+                right: -10%;
+                // display: block;
+            }
+        }
+
+        @include responsive__mode(tablet) {
+            width: 40%;
+
+            &::before {
+                top: 0;
+            }
+        }
+
+        @include responsive__mode(tablet-medium) {
+            width: 40%;
+
+            &::before {
+                // content: url("../../assets/home/desktop/bg-pattern-hero-home.svg");
+                // position: absolute;
+                // width: 40%;
+                top: 0;
+                right: 0;
+                // display: block;
+            }
+        }
+
     }
 
     &-pattern {
@@ -802,7 +858,7 @@
     }
 
     @include responsive__mode(tablet-medium) {
-        bottom: -12%;
+        bottom: -280px;
         left: 10%;
         width: 80%;
     }
@@ -1008,4 +1064,32 @@
         }
     }
 }
+}
+
+#mobile {
+    display: block;
+}
+
+#desktop, #tablet {
+    display: none;
+}
+
+@include responsive__mode(tablet-portrait) {
+    #mobile {
+        display: none;
+    }
+
+    #tablet {
+        display: block;
+    }
+}
+
+@include responsive__mode(tablet) {
+    #desktop {
+        display: block;
+    }
+
+    #tablet {
+        display: none;
+    }
 }

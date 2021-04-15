@@ -6,6 +6,7 @@
     z-index: 4;
     box-shadow: 0 5px 12px 1px rgba(0, 0, 0, 0.1);
     width: 100%;
+    transition: 0.5s;
 
     @include responsive__mode(tablet-portrait) {
         padding: 4rem 2rem;
@@ -78,4 +79,22 @@
         }
     }
 
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    background: $light-peach;
+    // padding: 2rem;
+    @include responsive__mode(tablet-portrait) {
+        padding: 2rem 2rem;
+    }
+
+    @include responsive__mode(tablet) {
+        padding: 2rem 3rem;
+    }
+
+    @include responsive__mode(tablet-medium) {
+        padding: 2rem 10rem;
+    }
 }
