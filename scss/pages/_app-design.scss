@@ -1,130 +1,95 @@
 .app-intro {
-    background: $peach;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8rem 1.5rem;
-    margin-top: 7rem;
-    margin-bottom: 12rem;
-    color: $white;
-    border-radius: 0;
-    position: relative;
-    overflow: hidden;
+	background: $peach;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 8rem 1.5rem;
+	margin-top: 7rem;
+	margin-bottom: 12rem;
+	color: $white;
+	border-radius: 0;
+	position: relative;
+	overflow: hidden;
 
-    &__heading {
-        text-transform: capitalize;
-        font-size: 3.5rem;
-        margin-bottom: 1.5rem;
-        font-weight: 400;
-    }
+	&__heading {
+		text-transform: capitalize;
+		font-size: 3.5rem;
+		margin-bottom: 1.5rem;
+		font-weight: 400;
+	}
 
-    &__text {
-        font-size: 1.5rem;
-        text-align: center;
+	&__text {
+		font-size: 1.5rem;
+		text-align: center;
 
-        & span {
-            display: block;
-        }
-    }
+		& span {
+			display: block;
+		}
+	}
 
-    &::after {
-        content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-        position: absolute;
-        top: 12%;
-        left: 40%;
-        transform: rotate(-45deg) scale(1.2);
-    }
+	&::after {
+		content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+		position: absolute;
+		top: 12%;
+		left: 40%;
+		transform: rotate(-45deg) scale(1.2);
+	}
 
-    @include responsive__mode(tablet-portrait){
-        // background: $peach;
-        // display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 4rem 0;
-        margin-top: 0;
-        margin-bottom: 12rem;
-        // color: $white;
-        border-radius: 12px;
-        // position: relative;
-        // overflow: hidden;
+	@include responsive__mode(tablet-portrait) {
+		flex-direction: column;
+		align-items: center;
+		padding: 4rem 0;
+		margin-top: 0;
+		margin-bottom: 12rem;
+		border-radius: 12px;
 
-        &__heading {
-            text-transform: capitalize;
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-        }
+		&__heading {
+			text-transform: capitalize;
+			font-size: 3.5rem;
+			margin-bottom: 1.5rem;
+			font-weight: 400;
+		}
 
-        &__text {
-            font-size: 1.5rem;
-            text-align: center;
+		&__text {
+			font-size: 1.5rem;
+			text-align: center;
 
-            & span {
-                display: block;
-            }
-        }
+			& span {
+				display: block;
+			}
+		}
 
-        &::after {
-            content: url("../../assets/web-design/desktop/bg-pattern-intro-web.svg");
-            position: absolute;
-            top: -60%;
-            left: -2.5%;
-            transform: rotate(180deg) scale(1);
-        }
-    }
+		&::after {
+			content: url("../../assets/web-design/desktop/bg-pattern-intro-web.svg");
+			position: absolute;
+			top: -60%;
+			left: -2.5%;
+			transform: rotate(180deg) scale(1);
+		}
+	}
 
-    @include responsive__mode(tablet){
-        // background: $peach;
-        // display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 8rem 0;
-        margin-top: 0;
-        margin-bottom: 12rem;
-        // color: $white;
-        border-radius: 12px;
-        // position: relative;
-        // overflow: hidden;
-
-        // &__heading {
-        //     text-transform: capitalize;
-        //     font-size: 3.5rem;
-        //     margin-bottom: 1.5rem;
-        //     font-weight: 400;
-        // }
-
-        // &__text {
-        //     font-size: 1.5rem;
-        //     text-align: center;
-
-        //     & span {
-        //         display: block;
-        //     }
-        // }
-
-        // &::after {
-        //     content: url("../../assets/web-design/desktop/bg-pattern-intro-web.svg");
-        //     position: absolute;
-        //     top: -60%;
-        //     left: -2.5%;
-        //     transform: rotate(180deg) scale(1);
-        // }
-    }
+	@include responsive__mode(tablet) {
+		flex-direction: column;
+		align-items: center;
+		padding: 8rem 0;
+		margin-top: 0;
+		margin-bottom: 12rem;
+		border-radius: 12px;
+	}
 }
 
 .appSub-design {
-    // bottom: -15%;
-    bottom: -485px;
+	bottom: -485px;
 
-    @include responsive__mode(tablet-portrait) {
-        bottom: -415px;
-    }
+	@include responsive__mode(tablet-portrait) {
+		bottom: -415px;
+	}
 
-    @include responsive__mode(tablet) {
-        bottom: -420px;
-    }
+	@include responsive__mode(tablet) {
+		bottom: -420px;
+	}
 
-    @include responsive__mode(tablet-medium) {
-        bottom: -435px;
-    }
+	@include responsive__mode(tablet-medium) {
+		bottom: -435px;
+	}
 }

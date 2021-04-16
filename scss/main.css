@@ -9,13 +9,13 @@
 }
 
 body {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   overflow-x: hidden;
   position: relative;
 }
 
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   width: 100%;
   height: 100%;
@@ -130,7 +130,7 @@ html {
 }
 
 .footer-top__links::before {
-  content: '';
+  content: "";
   width: 100%;
   border-bottom: 1px solid rgba(151, 151, 151, 0.2);
   display: block;
@@ -148,7 +148,7 @@ html {
             flex-direction: row;
   }
   .footer-top__links::before {
-    content: '';
+    content: "";
     display: none;
   }
 }
@@ -175,7 +175,7 @@ html {
 
 @media only screen and (min-width: 805px) {
   .footer-top__links--link a::after {
-    content: '';
+    content: "";
     width: 0;
     height: 1px;
     background: #ffffff;
@@ -190,7 +190,7 @@ html {
 
 @media only screen and (min-width: 600px) {
   .footer-top::after {
-    content: '';
+    content: "";
     width: 100%;
     border-bottom: 1px solid rgba(151, 151, 151, 0.2);
     display: block;
@@ -363,10 +363,6 @@ html {
 @media only screen and (min-width: 805px) {
   .header {
     padding: 4rem 3rem;
-    position: static;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    width: auto;
   }
 }
 
@@ -424,7 +420,9 @@ html {
 .sticky {
   position: fixed;
   width: 100%;
-  background: #FFAD9B;
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (min-width: 600px) {
@@ -506,7 +504,7 @@ html {
 }
 
 .nav-link__item a::after {
-  content: '';
+  content: "";
   width: 0;
   height: 1px;
   background: #1D1C1E;
@@ -515,9 +513,24 @@ html {
   transition: all 0.3s;
 }
 
+.nav-link__item a.active::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #1D1C1E;
+  display: block;
+}
+
 @media only screen and (min-width: 805px) {
-  .nav-link__item a:hover::after {
+  .nav-link__item a:hover::after, .nav-link__item a:active::after {
     width: 100%;
+  }
+  .nav-link__item a .active::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #1D1C1E;
+    display: block;
   }
 }
 
@@ -1885,8 +1898,8 @@ html {
   width: 100%;
   height: 100%;
   border-radius: 12px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .project-content__left img {
@@ -1970,8 +1983,8 @@ html {
 .project-content__texts--link img {
   width: 2%;
   height: 10%;
-  -webkit-transition: all  0.3s;
-  transition: all  0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -2480,7 +2493,8 @@ html {
   display: block;
 }
 
-#desktop, #tablet {
+#desktop,
+#tablet {
   display: none;
 }
 
@@ -2725,33 +2739,39 @@ html {
       align-self: center;
 }
 
-.contact-form__group input, .contact-form__group textarea {
+.contact-form__group input,
+.contact-form__group textarea {
   background: transparent;
   outline: none;
   color: #F1F3F5;
 }
 
-.contact-form__group input::-webkit-input-placeholder, .contact-form__group textarea::-webkit-input-placeholder {
+.contact-form__group input::-webkit-input-placeholder,
+.contact-form__group textarea::-webkit-input-placeholder {
   color: #F1F3F5;
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
-.contact-form__group input:-ms-input-placeholder, .contact-form__group textarea:-ms-input-placeholder {
+.contact-form__group input:-ms-input-placeholder,
+.contact-form__group textarea:-ms-input-placeholder {
   color: #F1F3F5;
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
-.contact-form__group input::-ms-input-placeholder, .contact-form__group textarea::-ms-input-placeholder {
+.contact-form__group input::-ms-input-placeholder,
+.contact-form__group textarea::-ms-input-placeholder {
   color: #F1F3F5;
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
-.contact-form__group input::placeholder, .contact-form__group textarea::placeholder {
+.contact-form__group input::placeholder,
+.contact-form__group textarea::placeholder {
   color: #F1F3F5;
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
-.contact-form__group input[class^="text"], .contact-form__group textarea {
+.contact-form__group input[class^="text"],
+.contact-form__group textarea {
   width: 80%;
   padding: 0 0 1rem 1rem;
   border: none;
@@ -2763,7 +2783,8 @@ html {
   border-top: none;
 }
 
-.contact-form__group input[type="tel"], .contact-form__group input[type="email"] {
+.contact-form__group input[type="tel"],
+.contact-form__group input[type="email"] {
   padding-top: 2rem;
 }
 
@@ -2891,7 +2912,8 @@ html {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .contact-form__group input[class^="text"], .contact-form__group textarea {
+  .contact-form__group input[class^="text"],
+  .contact-form__group textarea {
     width: 80%;
     border: none;
   }
@@ -2977,7 +2999,8 @@ html {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .contact-form__group input[class^="text"], .contact-form__group textarea {
+  .contact-form__group input[class^="text"],
+  .contact-form__group textarea {
     width: 80%;
     padding: 0 0 1rem 1rem;
     border: none;
@@ -2987,7 +3010,8 @@ html {
     padding: 2rem 0 0 1rem;
     border-top: none;
   }
-  .contact-form__group input[type="tel"], .contact-form__group input[type="email"] {
+  .contact-form__group input[type="tel"],
+  .contact-form__group input[type="email"] {
     padding-top: 2rem;
   }
   .contact-form__submit {
@@ -3710,7 +3734,8 @@ html {
     background: #E7816B;
     cursor: pointer;
   }
-  .web-designs__content--text:hover .web-designs__content--text-heading, .web-designs__content--text:hover .web-designs__content--text-text {
+  .web-designs__content--text:hover .web-designs__content--text-heading,
+  .web-designs__content--text:hover .web-designs__content--text-text {
     color: #ffffff;
   }
 }
@@ -3738,7 +3763,8 @@ html {
     background: #E7816B;
     cursor: pointer;
   }
-  .web-designs__content--text:hover .web-designs__content--text-heading, .web-designs__content--text:hover .web-designs__content--text-text {
+  .web-designs__content--text:hover .web-designs__content--text-heading,
+  .web-designs__content--text:hover .web-designs__content--text-text {
     color: #ffffff;
   }
 }
@@ -3826,8 +3852,8 @@ html {
 .design-links__content--text-link img {
   width: 2%;
   height: 10%;
-  -webkit-transition: all  0.3s;
-  transition: all  0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

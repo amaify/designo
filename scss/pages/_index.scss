@@ -1,1095 +1,827 @@
 .hero {
-    background-color: $peach;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    
-    margin-bottom: 10rem;
-    padding: 1rem 0 20rem 0;
-    overflow: hidden;
+	background-color: $peach;
+	display: flex;
+	position: relative;
+	flex-direction: column;
 
-    @include responsive__mode(tablet-portrait) {
-        // flex-direction: row;
-        border-radius: 12px;
-        padding: 0 0;
-    }
+	margin-bottom: 10rem;
+	padding: 1rem 0 20rem 0;
+	overflow: hidden;
 
-    @include responsive__mode(tablet) {
-        flex-direction: row;
-        // border-radius: 12px;
-        // padding: 0 0;
-    }
+	@include responsive__mode(tablet-portrait) {
+		border-radius: 12px;
+		padding: 0 0;
+	}
 
-    @include responsive__mode(tablet-medium) {
-        padding: 6rem 0;
-    }
+	@include responsive__mode(tablet) {
+		flex-direction: row;
+	}
 
-    &-content {
-        color: $white;
-        width: 100%;
-        text-align: center;
-        padding: 12rem 3rem;
-        // margin-bottom: 33rem;
-        position: relative;
-        z-index: 1;
-        // padding-left: 10rem;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
+	@include responsive__mode(tablet-medium) {
+		padding: 6rem 0;
+	}
 
-        &__heading {
-            font-size: 3rem;   
-            margin: 0 0 2rem 0;
-            font-weight: 400;
-        }
+	&-content {
+		color: $white;
+		width: 100%;
+		text-align: center;
+		padding: 12rem 3rem;
+		position: relative;
+		z-index: 1;
 
-        &__text {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            line-height: 2.5rem;
-        }
+		&__heading {
+			font-size: 3rem;
+			margin: 0 0 2rem 0;
+			font-weight: 400;
+		}
 
-        &__link {
-            text-decoration: none;
-            color: $black;
-            padding: 1.2rem 1.2rem;
-            border-radius: 4px;
-            background: $white;
-            text-transform: uppercase;
-            transition: all 0.3s;
+		&__text {
+			font-size: 1.3rem;
+			margin-bottom: 3rem;
+			line-height: 2.5rem;
+		}
 
-            // &:hover {
-            //     background: $light-peach;
-            //     color: $white;
-            // }
-        }
+		&__link {
+			text-decoration: none;
+			color: $black;
+			padding: 1.2rem 1.2rem;
+			border-radius: 4px;
+			background: $white;
+			text-transform: uppercase;
+			transition: all 0.3s;
+		}
 
-        @include responsive__mode(tablet-portrait) {
-            width: 100%;
-            // margin-right: auto;
-            padding: 5rem 5rem 0 5rem;
-            text-align: center;
-            margin-bottom: 550px;
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: center;
+		@include responsive__mode(tablet-portrait) {
+			width: 100%;
+			padding: 5rem 5rem 0 5rem;
+			text-align: center;
+			margin-bottom: 550px;
 
-            &__heading {
-                font-size: 4rem;   
-                margin: 0 auto 3rem auto;
-                line-height: 4rem;
-                font-weight: 400;
-                width: 75%;
-            }
+			&__heading {
+				font-size: 4rem;
+				margin: 0 auto 3rem auto;
+				line-height: 4rem;
+				font-weight: 400;
+				width: 75%;
+			}
 
-            &__text {
-                font-size: 1.7rem;
-                // margin-bottom: 3rem;
-                line-height: 2.5rem;
-                width: 80%;
-                margin: 0 auto 3rem auto;
-            }
-    
-            &__link {
-                text-decoration: none;
-                color: $black;
-                padding: 1.2rem 1.2rem;
-                border-radius: 4px;
-                background: $white;
-                text-transform: uppercase;
-                transition: all 0.3s;
-    
-                // &:hover {
-                //     background: $light-peach;
-                //     color: $white;
-                // }
-            }
-        }
+			&__text {
+				font-size: 1.7rem;
+				line-height: 2.5rem;
+				width: 80%;
+				margin: 0 auto 3rem auto;
+			}
 
-        @include responsive__mode(tablet) {
-            width: 60%;
-            margin-right: auto;
-            padding: 10rem 5rem 10rem 5rem;
-            text-align: left;
-            display: flex;
-            margin-bottom: 0;
-            flex-direction: column;
-            justify-content: center;
+			&__link {
+				text-decoration: none;
+				color: $black;
+				padding: 1.2rem 1.2rem;
+				border-radius: 4px;
+				background: $white;
+				text-transform: uppercase;
+				transition: all 0.3s;
+			}
+		}
 
-            &__heading {
-                font-size: 3rem;   
-                margin: 0 0 2rem 0;
-                line-height: auto;
-                width: auto;
-                // font-weight: 400;
-            }
+		@include responsive__mode(tablet) {
+			width: 60%;
+			margin-right: auto;
+			padding: 10rem 5rem 10rem 5rem;
+			text-align: left;
+			display: flex;
+			margin-bottom: 0;
+			flex-direction: column;
+			justify-content: center;
 
-            &__text {
-                font-size: 1.4rem;
-                margin: 0 0 3rem 0;
-                // margin-bottom: 3rem;
-                // line-height: 2.5rem;
-            }
-    
-            &__link {
-                // text-decoration: none;
-                // color: $black;
-                // padding: 1.2rem 1.2rem;
-                // border-radius: 4px;
-                // background: $white;
-                // text-transform: uppercase;
-                // transition: all 0.3s;
-    
-                &:hover {
-                    background: $light-peach;
-                    color: $white;
-                }
-            }
-        }
+			&__heading {
+				font-size: 3rem;
+				margin: 0 0 2rem 0;
+				line-height: auto;
+				width: auto;
+			}
 
-        @include responsive__mode(tablet-medium) {
-            width: 60%;
-            // margin-right: auto;
-            padding-left: 10rem;
-            // text-align: left;
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: center;
+			&__text {
+				font-size: 1.4rem;
+				margin: 0 0 3rem 0;
+			}
 
-            &__heading {
-                font-size: 6rem;   
-                margin: 0 0 2rem 0;
-                line-height: 6rem;
-                width: auto;
-                // font-weight: 400;
-            }
+			&__link {
+				&:hover {
+					background: $light-peach;
+					color: $white;
+				}
+			}
+		}
 
-            &__text {
-                font-size: 1.7rem;
-                // margin-bottom: 3rem;
-                line-height: 2.5rem;
-                width: 70%;
-            }
-    
-            &__link {
-                // text-decoration: none;
-                // color: $black;
-                // padding: 1.2rem 1.2rem;
-                // border-radius: 4px;
-                // background: $white;
-                // text-transform: uppercase;
-                // transition: all 0.3s;
-    
-                &:hover {
-                    background: $light-peach;
-                    color: $white;
-                }
-            }
-        }
-    }
+		@include responsive__mode(tablet-medium) {
+			width: 60%;
+			padding-left: 10rem;
 
-    &-image {
-        // width: 100%;
-        // position: relative;
+			&__heading {
+				font-size: 6rem;
+				margin: 0 0 2rem 0;
+				line-height: 6rem;
+				width: auto;
+			}
 
-        &__img {
-            width: 100%;
-            // height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 56%;
-            // top: 510px;
-            right: 0;
-            z-index: 0;
-            // transform: scale(1.1);
+			&__text {
+				font-size: 1.7rem;
+				line-height: 2.5rem;
+				width: 70%;
+			}
 
-            @include responsive__mode(tablet-portrait) {
-                width: 100%;
-                // height: 100%;
-                // object-fit: cover;
-                // position: absolute;
-                top: 27%;
-                right: 0;
-                // z-index: 0;
-            }
+			&__link {
+				&:hover {
+					background: $light-peach;
+					color: $white;
+				}
+			}
+		}
+	}
 
-            @include responsive__mode(tablet) {
-                width: 40%;
-                // height: 100%;
-                // object-fit: cover;
-                // position: absolute;
-                top: 10%;
-                right: 0;
-                // z-index: 0;
-            }
+	&-image {
+		&__img {
+			width: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 56%;
+			right: 0;
+			z-index: 0;
 
-            @include responsive__mode(tablet-medium) {
-                width: 40%;
-                // height: 100%;
-                // object-fit: cover;
-                // position: absolute;
-                top: 10%;
-                right: 0;
-                // z-index: 0;
-            }
-        }
+			@include responsive__mode(tablet-portrait) {
+				width: 100%;
 
-        &::before {
-            content: url("../../assets/home/desktop/bg-pattern-hero-home.svg");
-            position: absolute;
-            // width: 40%;
-            top: 21%;
-            right: -71%;
-            // display: block;
-        }
+				top: 27%;
+				right: 0;
+			}
 
-        @include responsive__mode(tablet-portrait) {
-            &::before {
-                // content: url("../../assets/home/desktop/bg-pattern-hero-home.svg");
-                // position: absolute;
-                // width: 40%;
-                top: 10%;
-                right: -10%;
-                // display: block;
-            }
-        }
+			@include responsive__mode(tablet) {
+				width: 40%;
 
-        @include responsive__mode(tablet) {
-            width: 40%;
+				top: 10%;
+				right: 0;
+			}
 
-            &::before {
-                top: 0;
-            }
-        }
+			@include responsive__mode(tablet-medium) {
+				width: 40%;
 
-        @include responsive__mode(tablet-medium) {
-            width: 40%;
+				top: 10%;
+				right: 0;
+			}
+		}
 
-            &::before {
-                // content: url("../../assets/home/desktop/bg-pattern-hero-home.svg");
-                // position: absolute;
-                // width: 40%;
-                top: 0;
-                right: 0;
-                // display: block;
-            }
-        }
+		&::before {
+			content: url("../../assets/home/desktop/bg-pattern-hero-home.svg");
+			position: absolute;
+			top: 21%;
+			right: -71%;
+		}
 
-    }
+		@include responsive__mode(tablet-portrait) {
+			&::before {
+				top: 10%;
+				right: -10%;
+			}
+		}
 
-    &-pattern {
-        // height: 100%;
-        width: 100%;
-        bottom: 125px;
-        left: 50%;
-        // position: absolute;
-        position: relative;
-        transform: scale(2);
-        // object-fit: cover;
-        z-index: 0;
+		@include responsive__mode(tablet) {
+			width: 40%;
 
+			&::before {
+				top: 0;
+			}
+		}
 
-        @include responsive__mode(tablet-portrait) {
-            height: 100%;
-            width: 100%;
-            // position: relative;
-            bottom: 230px;
-            left: 15%;
-            object-fit: cover;
-            transform: scale(1);
-        }
+		@include responsive__mode(tablet-medium) {
+			width: 40%;
 
-        @include responsive__mode(tablet) {
-            // height: 100%;
-            width: 55%;
-            position: absolute;
-            bottom: 1%;
-            left: 50%;
-            // object-fit: cover;
-            // transform: scale(1);
-        }
+			&::before {
+				top: 0;
+				right: 0;
+			}
+		}
+	}
 
-        @include responsive__mode(tablet-medium) {
-            // height: 100%;
-            width: auto;
-            position: relative;
-            bottom: 0;
-            left: 0;
-            // object-fit: cover;
-            // transform: scale(1);
-        }
-    }
+	&-pattern {
+		width: 100%;
+		bottom: 125px;
+		left: 50%;
+		position: relative;
+		transform: scale(2);
+		z-index: 0;
+
+		@include responsive__mode(tablet-portrait) {
+			height: 100%;
+			width: 100%;
+			bottom: 230px;
+			left: 15%;
+			object-fit: cover;
+			transform: scale(1);
+		}
+
+		@include responsive__mode(tablet) {
+			width: 55%;
+			position: absolute;
+			bottom: 1%;
+			left: 50%;
+		}
+
+		@include responsive__mode(tablet-medium) {
+			width: auto;
+			position: relative;
+			bottom: 0;
+			left: 0;
+		}
+	}
 }
 
 .project {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 0 3rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 0 3rem;
 
-    @include responsive__mode(tablet-portrait) {
-        // display: flex;
-        // flex-wrap: wrap;
-        // flex-direction: row;
-        padding: 0 0;
-    }
+	@include responsive__mode(tablet-portrait) {
+		padding: 0 0;
+	}
 
-    @include responsive__mode(tablet) {
-        // display: flex;
-        // flex-wrap: wrap;
-        flex-direction: row;
-    }
+	@include responsive__mode(tablet) {
+		flex-direction: row;
+	}
 
-    &-content {
-        width: 100%;
-        position: relative;
+	&-content {
+		width: 100%;
+		position: relative;
 
-        @include responsive__mode(tablet-portrait) {
-            // width: 48%;
-            // position: relative;
-        }
+		@include responsive__mode(tablet) {
+			width: 48%;
+		}
 
-        @include responsive__mode(tablet) {
-            width: 48%;
-            // position: relative;
-        }
+		&__left {
+			margin-bottom: 2rem;
 
-        &__left {
-            margin-bottom: 2rem;            
+			&::after {
+				content: "";
+				background: rgba(0, 0, 0, 0.5);
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 12px;
+				transition: all 0.3s;
+			}
 
-            &::after {
-                content: "";
-                background: rgba(0, 0, 0, 0.5);
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border-radius: 12px;
-                transition: all .3s;
-            }
+			& img {
+				width: 100%;
+				height: 100%;
+				border-radius: 12px;
+				object-fit: cover;
+				display: block;
+			}
 
-            & img {
-                width: 100%;
-                height: 100%;
-                border-radius: 12px;
-                object-fit: cover;
-                display: block;
-            }
+			@include responsive__mode(tablet) {
+				margin-right: auto;
+				margin-bottom: 0;
 
-            @include responsive__mode(tablet-portrait) {
-                // margin-right: auto; 
-                // margin-bottom: 0; 
-            }
+				&:hover {
+					&::after {
+						content: "";
+						background: rgba(231, 129, 107, 0.7);
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						border-radius: 12px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
 
-            @include responsive__mode(tablet) {
-                margin-right: auto; 
-                margin-bottom: 0; 
+		&__right {
+			& img {
+				width: 100%;
+				border-radius: 12px;
+				object-fit: cover;
+				display: block;
+			}
+		}
 
-                &:hover {
-                    &::after {
-                        content: "";
-                        background: rgba(231, 129, 107, 0.7);
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 12px;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
+		&__texts {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			width: 100%;
+			z-index: 1;
 
-        &__right {
+			&--heading {
+				color: $white;
+				width: 100%;
+				text-transform: uppercase;
+				font-size: 2.5rem;
+				font-weight: 400;
+				letter-spacing: 0.5rem;
 
-            & img {
-                width: 100%;
-                border-radius: 12px;
-                object-fit: cover;
-                display: block;
-            }
-        }
+				@include responsive__mode(tablet-portrait) {
+					font-size: 3.5rem;
+					letter-spacing: 0;
+				}
+			}
 
-        &__texts {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 100%;
-            z-index: 1;
+			&--link {
+				text-decoration: none;
+				color: $white;
+				font-size: 1.5rem;
+				text-transform: uppercase;
 
-            &--heading {
-                color: $white;
-                width: 100%;
-                text-transform: uppercase;
-                font-size: 2.5rem;
-                font-weight: 400;
-                letter-spacing: 0.5rem;
+				display: flex;
+				justify-content: center;
+				align-content: center;
+				width: 100%;
 
-                @include responsive__mode(tablet-portrait) {
-                    font-size: 3.5rem;
-                    letter-spacing: 0;
-                }
-            }
+				& img {
+					width: 2%;
+					height: 10%;
+					transition: all 0.3s;
+					align-self: center;
+				}
 
-            &--link {
-                text-decoration: none;
-                color: $white;
-                font-size: 1.5rem;
-                text-transform: uppercase;
+				& p {
+					margin-right: 3rem;
+				}
 
-                display: flex;
-                justify-content: center;
-                align-content: center;
-                width: 100%;
+				@include responsive__mode(tablet) {
+					&:hover {
+						& img {
+							transform: translateX(100%);
+						}
+					}
+				}
+			}
+		}
 
-                & img {
-                    width: 2%;
-                    height: 10%;
-                    transition: all  0.3s;
-                    align-self: center;
-                }
+		&__top,
+		&__bottom {
+			position: relative;
 
-                & p {
-                    margin-right: 3rem;
-                }
+			&::after {
+				content: "";
+				background: rgba(0, 0, 0, 0.5);
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 12px;
+				transition: all 0.3s;
+			}
 
-                @include responsive__mode(tablet) {
-                    &:hover {
-                        & img {
-                            transform: translateX(100%);
-                        }
-                    }
-                }
+			@include responsive__mode(tablet) {
+				&:hover {
+					&::after {
+						content: "";
+						background: rgba(231, 129, 107, 0.7);
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						border-radius: 12px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
 
-            }
-        }
-
-        &__top, &__bottom {
-            position: relative;
-
-            &::after {
-                content: "";
-                background: rgba(0, 0, 0, 0.5);
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border-radius: 12px;
-                transition: all 0.3s;
-            }
-
-            @include responsive__mode(tablet-portrait) {
-                // &:hover {
-                //     &::after {
-                //         content: "";
-                //         background: rgba(231, 129, 107, 0.7);
-                //         position: absolute;
-                //         top: 0;
-                //         left: 0;
-                //         width: 100%;
-                //         height: 100%;
-                //         border-radius: 12px;
-                //         cursor: pointer;
-                //     }
-                // }
-            }
-
-            @include responsive__mode(tablet) {
-                &:hover {
-                    &::after {
-                        content: "";
-                        background: rgba(231, 129, 107, 0.7);
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 12px;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
-
-        &__top { 
-            margin-bottom: 2.5rem;
-        }
-    }
+		&__top {
+			margin-bottom: 2.5rem;
+		}
+	}
 }
 
 .quality {
-    display: flex;
-    // flex-wrap: wrap;
-    // justify-content: center;
-    flex-direction: column;
-    padding: 10rem 0;
-    // position: relative;
-    margin-top: 5rem;
-    margin-bottom: 20rem;
+	display: flex;
+	flex-direction: column;
+	padding: 10rem 0;
+	margin-top: 5rem;
+	margin-bottom: 20rem;
 
-    @include responsive__mode(tablet-portrait) {
-        // flex-direction: row;
-        // justify-content: center;
-        padding: 10rem 0;
-        position: relative;
-        // margin-top: 10rem;
-        margin-bottom: 20rem;
-    }
+	@include responsive__mode(tablet-portrait) {
+		padding: 10rem 0;
+		position: relative;
+		margin-bottom: 20rem;
+	}
 
-    @include responsive__mode(tablet) {
-        flex-direction: row;
-        justify-content: center;
-        padding: 10rem 0;
-        position: relative;
-        margin-top: 10rem;
-        margin-bottom: 20rem;
-    }
+	@include responsive__mode(tablet) {
+		flex-direction: row;
+		justify-content: center;
+		padding: 10rem 0;
+		position: relative;
+		margin-top: 10rem;
+		margin-bottom: 20rem;
+	}
 
-    &-content {
-        text-align: center;
-        width: 100%;
+	&-content {
+		text-align: center;
+		width: 100%;
 
-        &:not(:last-child) {
-            margin-bottom: 10rem;
-        }
+		&:not(:last-child) {
+			margin-bottom: 10rem;
+		}
 
-        &__image {
-            width: 40%;
-            margin-bottom: 3rem;
-        }
+		&__image {
+			width: 40%;
+			margin-bottom: 3rem;
+		}
 
-        @include responsive__mode(tablet-portrait) {
-            text-align: left;
-            // width: 32%;
-            padding-left: 3rem;
-            display: flex;
-            flex-direction: row;
+		@include responsive__mode(tablet-portrait) {
+			text-align: left;
+			padding-left: 3rem;
+			display: flex;
+			flex-direction: row;
 
-            &:not(:last-child) {
-                margin-right: auto;
-                margin-bottom: 10rem;
-            }
+			&:not(:last-child) {
+				margin-right: auto;
+				margin-bottom: 10rem;
+			}
 
-            &__image {
-                width: 70%;
-                margin-bottom: 0;
-            }
+			&__image {
+				width: 70%;
+				margin-bottom: 0;
+			}
 
-            &__details {
-                width: 60%;
-            }
-        }
+			&__details {
+				width: 60%;
+			}
+		}
 
-        @include responsive__mode(tablet) {
-            text-align: center;
-            width: 32%;
-            padding-left: 0;
-            flex-direction: column;
+		@include responsive__mode(tablet) {
+			text-align: center;
+			width: 32%;
+			padding-left: 0;
+			flex-direction: column;
 
-            &:not(:last-child) {
-                margin-right: auto;
-                margin-bottom: 0;
-            }
+			&:not(:last-child) {
+				margin-right: auto;
+				margin-bottom: 0;
+			}
 
-            &__image {
-                width: 40%;
-                margin-bottom: 3rem;
-            }
+			&__image {
+				width: 40%;
+				margin-bottom: 3rem;
+			}
 
-            &__details {
-                width: 100%;
-            }
-        }
+			&__details {
+				width: 100%;
+			}
+		}
 
-        &__heading {
-            font-size: 2rem;
-            letter-spacing: 0.8rem;
-            font-weight: 400;
-            margin-bottom: 2.5rem;
-            text-transform: uppercase;
-            color: $dark-grey;
+		&__heading {
+			font-size: 2rem;
+			letter-spacing: 0.8rem;
+			font-weight: 400;
+			margin-bottom: 2.5rem;
+			text-transform: uppercase;
+			color: $dark-grey;
 
-            @include responsive__mode(tablet-portrait) {
-                font-size: 3rem;
-                letter-spacing: 0;
-                font-weight: 300;
-                margin-bottom: 1.5rem;
-            }
+			@include responsive__mode(tablet-portrait) {
+				font-size: 3rem;
+				letter-spacing: 0;
+				font-weight: 300;
+				margin-bottom: 1.5rem;
+			}
 
-            @include responsive__mode(tablet) {
-                // font-size: 3rem;
-                // letter-spacing: 0;
-                // font-weight: 300;
-                margin-bottom: 2.5rem;
-            }
-        }
+			@include responsive__mode(tablet) {
+				margin-bottom: 2.5rem;
+			}
+		}
 
-        &__text {
-            font-size: 1.5rem;
-            font-weight: 300;
-            width: 80%;
-            color: $dark-grey;
-            margin: 0 auto;
+		&__text {
+			font-size: 1.5rem;
+			font-weight: 300;
+			width: 80%;
+			color: $dark-grey;
+			margin: 0 auto;
 
-            @include responsive__mode(tablet-portrait) {
-                width: 100%;
-                margin: 0 0;
-                font-size: 1.4rem;
-            }
+			@include responsive__mode(tablet-portrait) {
+				width: 100%;
+				margin: 0 0;
+				font-size: 1.4rem;
+			}
 
-            @include responsive__mode(tablet) {
-                width: 80%;
-                margin: 0 auto;
-                font-size: 1.7rem;
-            }
-        }
+			@include responsive__mode(tablet) {
+				width: 80%;
+				margin: 0 auto;
+				font-size: 1.7rem;
+			}
+		}
 
-        &__left {
+		&__left {
+			&--imgContainer {
+				position: relative;
 
-            &--imgContainer {
-                position: relative;
+				&::before {
+					content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+					position: absolute;
+					top: -25%;
+					left: 25%;
+				}
 
-                &::before {
-                    content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-                    position: absolute;
-                    // top: 13%;
-                    // left: 8%;
-                    top: -25%; 
-                    left: 25%;
-                }
+				@include responsive__mode(tablet-portrait) {
+					margin-right: auto;
+					&::before {
+						top: -25%;
+						left: -15%;
+					}
+				}
 
-                @include responsive__mode(tablet-portrait) {
-                    margin-right: auto;
-                    &::before {
-                        // content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-                        // position: absolute;
-                        // top: 13%;
-                        // left: 8%;
-                        top: -25%; 
-                        left: -15%;
-                    }
-                }
+				@include responsive__mode(tablet) {
+					margin-right: 0;
+					&::before {
+						top: -45%;
+						left: 15%;
+					}
+				}
 
-                @include responsive__mode(tablet) {
-                    margin-right: 0;
-                    &::before {
-                        // content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-                        // position: absolute;
-                        // top: 13%;
-                        // left: 8%;
-                        top: -45%; 
-                        left: 15%;
-                    }
-                }
+				@include responsive__mode(tablet-medium) {
+					margin-right: 0;
+					&::before {
+						top: -25%;
+						left: 25%;
+					}
+				}
+			}
+		}
 
-                @include responsive__mode(tablet-medium) {
-                    margin-right: 0;
-                    &::before {
-                        // content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-                        // position: absolute;
-                        // top: 13%;
-                        // left: 8%;
-                        top: -25%; 
-                        left: 25%;
-                    }
-                }
-            }
+		&__center {
+			&--imgContainer {
+				position: relative;
 
-            // &::before {
-            //     content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-            //     position: absolute;
-            //     top: 13%;
-            //     left: 8%;
-            //     // top: -25%; 
-            //     // left: 0;
-            // }
-        }
+				&::before {
+					content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+					position: absolute;
+					top: -25%;
+					left: 25%;
+					transform: rotate(-90deg);
+				}
 
-        &__center {
+				@include responsive__mode(tablet-portrait) {
+					margin-right: auto;
+					&::before {
+						top: -25%;
+						left: -15%;
+					}
+				}
 
-            &--imgContainer {
-                position: relative;
+				@include responsive__mode(tablet) {
+					margin-right: 0;
+					&::before {
+						top: -50%;
+						left: 15%;
+					}
+				}
 
-                &::before {
-                    content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-                    position: absolute;
-                    top: -25%; 
-                    left: 25%;
-                    transform: rotate(-90deg);
-                }
+				@include responsive__mode(tablet-medium) {
+					margin-right: 0;
+					&::before {
+						top: -25%;
+						left: 25%;
+					}
+				}
+			}
+		}
 
-                @include responsive__mode(tablet-portrait) {
-                    margin-right: auto;
-                    &::before {
-                        // content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-                        // position: absolute;
-                        top: -25%; 
-                        left: -15%;
-                        // transform: rotate(-90deg);
-                    }
-                }
+		&__right {
+			&--imgContainer {
+				position: relative;
 
-                @include responsive__mode(tablet) {
-                    margin-right: 0;
-                    &::before {
-                    //     content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-                        // position: absolute;
-                        top: -50%; 
-                        left: 15%;
-                        // transform: rotate(-90deg);
-                    }
-                }
+				&::before {
+					content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
+					position: absolute;
+					top: -25%;
+					left: 25%;
+					transform: rotate(90deg);
+				}
 
-                @include responsive__mode(tablet-medium) {
-                    margin-right: 0;
-                    &::before {
-                    //     content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-                        // position: absolute;
-                        top: -25%; 
-                        left: 25%;
-                        // transform: rotate(-90deg);
-                    }
-                }
-            }
-            // &::before {
-            //     content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-            //     position: absolute;
-            //     top: 13%;
-            //     left: 43%;
-            //     transform: rotate(-90deg);
-            // }
-        }
+				@include responsive__mode(tablet-portrait) {
+					margin-right: auto;
+					padding-left: 2rem;
+					&::before {
+						top: -25%;
+						left: -15%;
+					}
+				}
 
-        &__right {
+				@include responsive__mode(tablet) {
+					margin-right: 0;
+					&::before {
+						top: -50%;
+						left: 15%;
+					}
+				}
 
-            &--imgContainer {
-                position: relative;
+				@include responsive__mode(tablet-medium) {
+					margin-right: 0;
+					&::before {
+						top: -25%;
+						left: 25%;
+					}
+				}
+			}
+		}
+	}
 
-                &::before {
-                    content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-                    position: absolute;
-                    top: -25%; 
-                    left: 25%;
-                    transform: rotate(90deg);
-                }
-
-                @include responsive__mode(tablet-portrait) {
-                    margin-right: auto;
-                    padding-left: 2rem;
-                    &::before {
-                        // content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-                        // position: absolute;
-                        top: -25%; 
-                        left: -15%;
-                        // transform: rotate(90deg);
-                    }
-                }
-
-                @include responsive__mode(tablet) {
-                    margin-right: 0;
-                    &::before {
-                        // content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-                        // position: absolute;
-                        top: -50%; 
-                        left: 15%;
-                        // transform: rotate(90deg);
-                    }
-                }
-
-                @include responsive__mode(tablet-medium) {
-                    margin-right: 0;
-                    &::before {
-                        // content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-                        // position: absolute;
-                        top: -25%; 
-                        left: 25%;
-                        // transform: rotate(90deg);
-                    }
-                }
-            }
-            // &::before {
-            //     content: url("../../assets/shared/desktop/bg-pattern-small-circle.svg");
-            //     position: absolute;
-            //     top: 13%;
-            //     right: 9%;
-            //     transform: rotate(90deg);
-            // }
-        }
-    }
-
-    @include responsive__mode(tablet-medium) {
-        &::after {
-            content: url("../../assets/shared/desktop/bg-pattern-leaf.svg");
-            position: absolute;
-            top: 30%;
-            left: 32%;
-            transform: rotate(180deg);
-            z-index: -1;
-        }
-    }
-
+	@include responsive__mode(tablet-medium) {
+		&::after {
+			content: url("../../assets/shared/desktop/bg-pattern-leaf.svg");
+			position: absolute;
+			top: 30%;
+			left: 32%;
+			transform: rotate(180deg);
+			z-index: -1;
+		}
+	}
 }
 
 .sub {
-    overflow: hidden;
-    position: absolute;
-    // bottom: -10.5%;
-    bottom: -335px;
-    left: 10%;
-    width: 80%;
-    margin: 0 auto;
-    z-index: 2;
+	overflow: hidden;
+	position: absolute;
+	bottom: -335px;
+	left: 10%;
+	width: 80%;
+	margin: 0 auto;
+	z-index: 2;
 
-    @include responsive__mode(tablet-portrait) {
-        bottom: -265px;
-        left: 5%;
-        width: 90%;
-    }
+	@include responsive__mode(tablet-portrait) {
+		bottom: -265px;
+		left: 5%;
+		width: 90%;
+	}
 
-    @include responsive__mode(tablet) {
-        bottom: -285px;
-        left: 10%;
-        width: 80%;
-    }
+	@include responsive__mode(tablet) {
+		bottom: -285px;
+		left: 10%;
+		width: 80%;
+	}
 
-    @include responsive__mode(tablet-medium) {
-        bottom: -280px;
-        left: 10%;
-        width: 80%;
-    }
+	@include responsive__mode(tablet-medium) {
+		bottom: -280px;
+		left: 10%;
+		width: 80%;
+	}
 
-    &-content {
-        background: $peach;
-        // background-image: linear-gradient(to right, $light-peach 20%, $peach 80%);
-        color: $white;
-        // padding: 6rem;
-        padding: 6rem 3rem;
-        display: flex;
-        flex-direction: column;
-        // align-items: center;
-        text-align: center;
-        border-radius: 8px;
-        position: relative;
+	&-content {
+		background: $peach;
+		color: $white;
+		padding: 6rem 3rem;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		border-radius: 8px;
+		position: relative;
 
-        &__words {
-            width: 100%;
-            margin-right: 0;
+		&__words {
+			width: 100%;
+			margin-right: 0;
 
-            &--heading {
-                font-size: 2.5rem;
-                width: 100%;
-                font-weight: 400;
-                margin-bottom: 1.5rem;
-            }
+			&--heading {
+				font-size: 2.5rem;
+				width: 100%;
+				font-weight: 400;
+				margin-bottom: 1.5rem;
+			}
 
-            &--text {
-                font-size: 1.3rem;
-                font-weight: 400;
-                margin-bottom: 3.5rem;
-            }
+			&--text {
+				font-size: 1.3rem;
+				font-weight: 400;
+				margin-bottom: 3.5rem;
+			}
 
-            &--link {
+			&--link {
+				& a {
+					text-decoration: none;
+					color: $black;
+					text-transform: uppercase;
+					position: relative;
+					z-index: 1;
+				}
+			}
+		}
 
-                & a {
-                    text-decoration: none;
-                    color: $black;
-                    text-transform: uppercase;
-                    position: relative;
-                    z-index: 1;
-                }
-            }
-        }
+		@include responsive__mode(tablet-portrait) {
+			padding: 6rem 6rem;
 
-        @include responsive__mode(tablet-portrait) {
-            // background: $peach;
-            // background-image: linear-gradient(to right, $light-peach 20%, $peach 80%);
-            // color: $white;
-            padding: 6rem 6rem;
-            // display: flex;
-            // align-items: center;
-            // flex-direction: row;
-            // text-align: left;
-            // border-radius: 8px;
-            // position: relative;
+			&__words {
+				&--heading {
+					font-size: 3rem;
+					width: 50%;
+					font-weight: 400;
+					margin: 0 auto 2rem auto;
+					line-height: 3rem;
+				}
 
-            &__words {
-                // width: 40%;
-                // margin-right: auto;
+				&--text {
+					font-size: 1.5rem;
+					font-weight: 300;
+				}
+			}
+		}
 
-                &--heading {
-                    font-size: 3rem;
-                    width: 50%;
-                    font-weight: 400;
-                    margin: 0 auto 2rem auto;
-                    line-height: 3rem;
-                }
+		@include responsive__mode(tablet) {
+			padding: 4rem 4rem;
+			align-items: center;
+			flex-direction: row;
+			text-align: left;
 
-                &--text {
-                    font-size: 1.5rem;
-                    font-weight: 300;
-                    // margin-bottom: 0;
-                }
+			&__words {
+				width: 60%;
+				margin-right: auto;
 
-                // &--link {
+				&--heading {
+					font-size: 3.5rem;
+					width: 50%;
+					margin: 0 0 2rem 0;
+					line-height: auto;
+				}
 
-                //     & a {
-                //         text-decoration: none;
-                //         color: $black;
-                //         text-transform: uppercase;
-                //         position: relative;
-                //         z-index: 1;
-                //     }
-                // }
-            }
-        }
+				&--text {
+					font-size: 1.5rem;
+					font-weight: 300;
+					margin-bottom: 0;
+				}
+			}
 
-        @include responsive__mode(tablet) {
-            // background: $peach;
-            // background-image: linear-gradient(to right, $light-peach 20%, $peach 80%);
-            // color: $white;
-            padding: 4rem 4rem;
-            // display: flex;
-            align-items: center;
-            flex-direction: row;
-            text-align: left;
-            // border-radius: 8px;
-            // position: relative;
+			@include responsive__mode(tablet-medium) {
+				padding: 6rem 6rem;
 
-            &__words {
-                width: 60%;
-                margin-right: auto;
+				&__words {
+					width: 40%;
 
-                &--heading {
-                    font-size: 3.5rem;
-                    width: 50%;
-                    // font-weight: 400;
-                    // margin-bottom: 0;
-                    margin: 0 0 2rem 0;
-                    line-height: auto;
-                }
+					&--heading {
+						font-size: 3.5rem;
+						width: 50%;
+						margin: 0 0 2rem 0;
+						line-height: auto;
+					}
+				}
+			}
 
-                &--text {
-                    font-size: 1.5rem;
-                    font-weight: 300;
-                    margin-bottom: 0;
-                }
+			&::after {
+				content: url("../../assets/web-design/desktop/bg-pattern-intro-web.svg");
+				position: absolute;
+				top: -60%;
+				left: 33.5%;
+				transform: rotate(180deg);
+			}
 
-                // &--link {
+			@include responsive__mode(tablet-portrait) {
+				&::after {
+					top: -60%;
+					left: 0;
+					transform: rotate(0);
+				}
+			}
 
-                //     & a {
-                //         text-decoration: none;
-                //         color: $black;
-                //         text-transform: uppercase;
-                //         position: relative;
-                //         z-index: 1;
-                //     }
-                // }
-            }
-
-            @include responsive__mode(tablet-medium) {
-                // background: $peach;
-                // background-image: linear-gradient(to right, $light-peach 20%, $peach 80%);
-                // color: $white;
-                padding: 6rem 6rem;
-                // display: flex;
-                // align-items: center;
-                // flex-direction: row;
-                // text-align: left;
-                // border-radius: 8px;
-                // position: relative;
-    
-                &__words {
-                    width: 40%;
-                    // margin-right: auto;
-    
-                    &--heading {
-                        font-size: 3.5rem;
-                        width: 50%;
-                        // font-weight: 400;
-                        // margin-bottom: 0;
-                        margin: 0 0 2rem 0;
-                        line-height: auto;
-                    }
-    
-                    // &--text {
-                    //     font-size: 1.5rem;
-                    //     font-weight: 300;
-                    //     margin-bottom: 0;
-                    // }
-    
-                    // &--link {
-    
-                    //     & a {
-                    //         text-decoration: none;
-                    //         color: $black;
-                    //         text-transform: uppercase;
-                    //         position: relative;
-                    //         z-index: 1;
-                    //     }
-                    // }
-                }
-        }
-
-        &::after {
-            content: url("../../assets/web-design/desktop/bg-pattern-intro-web.svg");
-            position: absolute;
-            top: -60%;
-            left: 33.5%;
-            transform: rotate(180deg);
-        }
-
-        @include responsive__mode(tablet-portrait) {
-            &::after {
-                // content: url("../../assets/web-design/desktop/bg-pattern-intro-web.svg");
-                // position: absolute;
-                top: -60%;
-                left: 0;
-                transform: rotate(0);
-            }
-        }
-
-        @include responsive__mode(tablet) {
-            &::after {
-                // content: url("../../assets/web-design/desktop/bg-pattern-intro-web.svg");
-                // position: absolute;
-                top: -60%;
-                left: 33.5%;
-                transform: rotate(180deg);
-            }
-        }
-    }
-}
+			@include responsive__mode(tablet) {
+				&::after {
+					top: -60%;
+					left: 33.5%;
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
 }
 
 #mobile {
-    display: block;
+	display: block;
 }
 
-#desktop, #tablet {
-    display: none;
+#desktop,
+#tablet {
+	display: none;
 }
 
 @include responsive__mode(tablet-portrait) {
-    #mobile {
-        display: none;
-    }
+	#mobile {
+		display: none;
+	}
 
-    #tablet {
-        display: block;
-    }
+	#tablet {
+		display: block;
+	}
 }
 
 @include responsive__mode(tablet) {
-    #desktop {
-        display: block;
-    }
+	#desktop {
+		display: block;
+	}
 
-    #tablet {
-        display: none;
-    }
+	#tablet {
+		display: none;
+	}
 }

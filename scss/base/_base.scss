@@ -1,46 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap");
 
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    font-family: 'Jost', sans-serif;
-    overflow-x: hidden;
-    position: relative;
+	font-family: "Jost", sans-serif;
+	overflow-x: hidden;
+	position: relative;
 
-    &::before {
-        content: '';
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        z-index: 3;
-        display: none;
-    }
+	&::before {
+		content: "";
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.6);
+		z-index: 3;
+		display: none;
+	}
 }
 
-// .remove-backdrop {
-//     &::before {
-//         content: "";
-//         display: none;
-//     }
-// }
-
 .add-backdrop {
-    &::before {
-        content: "";
-        display: block;
-    }
+	&::before {
+		content: "";
+		display: block;
+	}
 }
 
 html {
-    font-size: 62.5%;
-    max-width: 1920px;
-    margin: 0 auto;
-    scroll-behavior: smooth;
+	font-size: 62.5%;
+	max-width: 1920px;
+	margin: 0 auto;
+	scroll-behavior: smooth;
 }
