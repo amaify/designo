@@ -27,25 +27,32 @@
 			z-index: 1;
 
 			& img {
-				width: 100%;
-				object-fit: cover;
-				display: block;
+				// width: 100%;
+				// object-fit: cover;
+				// display: block;
 				border-top-right-radius: 0;
 				border-bottom-right-radius: 0;
 			}
 		}
 
 		&__heading {
-			font-size: 3rem;
+			font-size: 3.5rem;
 			text-transform: capitalize;
-			margin-bottom: 2rem;
+			margin-bottom: 1rem;
 			font-weight: 500;
+
+			position: relative;
+			z-index: 1;
 		}
 
 		&__text {
-			font-size: 1.2rem;
+			font-size: 1.7rem;
+			font-weight: 300;
 			width: 100%;
 			line-height: 2.5rem;
+
+			position: relative;
+			z-index: 1;
 		}
 	}
 
@@ -90,7 +97,7 @@
 			}
 
 			&__text {
-				font-size: 1.3rem;
+				font-size: 1.6rem;
 				width: 100%;
 				line-height: 2.5rem;
 			}
@@ -131,6 +138,7 @@
 					border-top-right-radius: 12px;
 					border-top-left-radius: 0;
 					border-bottom-right-radius: 12px;
+					border-bottom-left-radius: 0;
 				}
 			}
 
@@ -182,6 +190,7 @@
 					border-top-right-radius: 12px;
 					border-top-left-radius: 0;
 					border-bottom-right-radius: 12px;
+					border-bottom-left-radius: 0;
 				}
 			}
 
@@ -191,9 +200,9 @@
 			}
 
 			&__text {
-				font-size: 1.5rem;
-				width: 52%;
-				line-height: 2.5rem;
+				font-size: 1.8rem;
+				width: 70%;
+				line-height: 3rem;
 			}
 		}
 
@@ -247,10 +256,12 @@
 
 		& img {
 			width: 100%;
-			object-fit: cover;
-			display: block;
+			// object-fit: cover;
+			// display: block;
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
 		}
 
 		&__content {
@@ -261,12 +272,12 @@
 			font-size: 3.5rem;
 			font-weight: 400;
 			color: $peach;
-			margin-bottom: 3rem;
+			margin-bottom: 2rem;
 		}
 
 		&__text {
 			color: $dark-grey;
-			font-size: 1.4rem;
+			font-size: 1.6rem;
 			font-weight: 300;
 
 			& span {
@@ -320,7 +331,7 @@
 			}
 
 			&__text {
-				font-size: 1.4rem;
+				font-size: 1.6rem;
 
 				& span {
 					display: block;
@@ -731,11 +742,13 @@
 
 			& img {
 				width: 100%;
-				display: block;
+				// display: block;
 				object-fit: cover;
 
 				border-top-right-radius: 0;
 				border-bottom-right-radius: 0;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
 			}
 		}
 
@@ -745,12 +758,12 @@
 			&--heading {
 				font-size: 3rem;
 				color: $peach;
-				margin-bottom: 3rem;
+				margin-bottom: 2rem;
 				font-weight: 400;
 			}
 
 			&--text {
-				font-size: 1.4rem;
+				font-size: 1.6rem;
 				color: $dark-grey;
 				font-weight: 300;
 
@@ -801,7 +814,7 @@
 				}
 
 				&--text {
-					font-size: 1.4rem;
+					font-size: 1.6rem;
 					font-weight: 300;
 
 					& span {

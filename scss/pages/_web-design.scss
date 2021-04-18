@@ -3,7 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 8rem 1.5rem;
+	padding: 8rem 2rem;
 	margin-top: 7rem;
 	margin-bottom: 12rem;
 	color: $white;
@@ -19,9 +19,13 @@
 	}
 
 	&__text {
-		font-size: 1.3rem;
+		font-size: 1.7rem;
 		text-align: center;
+		width: 80%;
 		line-height: 2.5rem;
+
+		position: relative;
+		z-index: 1;
 
 		& span {
 			display: block;
@@ -46,18 +50,22 @@
 
 		&__heading {
 			text-transform: capitalize;
-			font-size: 3.5rem;
+			font-size: 4.5rem;
 			margin-bottom: 1.5rem;
-			font-weight: 400;
+			font-weight: 500;
 		}
 
 		&__text {
-			font-size: 1.5rem;
+			font-size: 2rem;
 			text-align: center;
 			line-height: 2rem;
+			font-weight: 400;
 
 			& span {
-				display: block;
+				&:not(:last-child) {
+					display: block;
+					margin-bottom: 1rem;
+				}
 			}
 		}
 
@@ -120,7 +128,8 @@
 
 			&-text {
 				color: $dark-grey;
-				font-size: 1.2rem;
+				font-size: 1.6rem;
+				font-weight: 300;
 				transition: all 0.3s;
 			}
 		}
@@ -276,10 +285,10 @@
 		}
 
 		& img {
-			width: 100%;
-			object-fit: cover;
-			border-radius: 12px;
-			display: block;
+			// width: 100%;
+			// object-fit: cover;
+			// border-radius: 12px;
+			// display: block;
 		}
 
 		@include overlay;

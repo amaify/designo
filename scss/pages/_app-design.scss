@@ -21,6 +21,8 @@
 	&__text {
 		font-size: 1.5rem;
 		text-align: center;
+		position: relative;
+		z-index: 1;
 
 		& span {
 			display: block;
@@ -45,17 +47,22 @@
 
 		&__heading {
 			text-transform: capitalize;
-			font-size: 3.5rem;
+			font-size: 4.5rem;
 			margin-bottom: 1.5rem;
 			font-weight: 400;
 		}
 
 		&__text {
-			font-size: 1.5rem;
+			font-size: 2rem;
 			text-align: center;
 
+			font-weight: 400;
+
 			& span {
-				display: block;
+				&:not(:last-child) {
+					display: block;
+					margin-bottom: 0.5rem;
+				}
 			}
 		}
 

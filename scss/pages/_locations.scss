@@ -42,7 +42,7 @@
 			}
 
 			&--heading {
-				font-size: 2.5rem;
+				font-size: 3rem;
 				color: $peach;
 				font-weight: 400;
 				margin-bottom: 1.5rem;
@@ -54,7 +54,7 @@
 				width: 100%;
 
 				&-text {
-					font-size: 1.3rem;
+					font-size: 1.6rem;
 					font-weight: 300;
 					line-height: 2.2rem;
 
@@ -84,7 +84,7 @@
 
 			& img {
 				width: 100%;
-				display: block;
+				// display: block;
 				object-fit: cover;
 				border-radius: 0;
 			}
