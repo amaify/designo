@@ -662,6 +662,17 @@ html {
   font-weight: 300;
 }
 
+@media (prefers-reduced-motion) {
+  .mobileNav-link__item {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .mobileNav-link__item:nth-child(1), .mobileNav-link__item:nth-child(2), .mobileNav-link__item:nth-child(3) {
+    -webkit-animation-name: reduceAnimation;
+            animation-name: reduceAnimation;
+  }
+}
+
 @-webkit-keyframes moveRight1 {
   0% {
     -webkit-transform: translateX(-100%);
@@ -687,6 +698,28 @@ html {
             transform: translateX(10%);
   }
   100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes reduceAnimation {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes reduceAnimation {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }

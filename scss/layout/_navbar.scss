@@ -174,6 +174,16 @@
 				font-size: 2rem;
 				font-weight: 300;
 			}
+
+			@media (prefers-reduced-motion) {
+				transform: translateX(0);
+
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3) {
+					animation-name: reduceAnimation;
+				}
+			}
 		}
 	}
 }
@@ -188,6 +198,16 @@
 	}
 
 	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes reduceAnimation {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
 		transform: translateX(0);
 	}
 }
