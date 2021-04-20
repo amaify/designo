@@ -2853,6 +2853,9 @@ html {
   border-radius: 4px;
   color: #1D1C1E;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
